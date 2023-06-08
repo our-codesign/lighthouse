@@ -6,14 +6,14 @@ interface ButtonProps {
   label: string;
   height?: string;
   width?: string;
-  buttonType: "type1" | "type2";
+  buttonType: "primary" | "secondary" | "tertiary";
 }
 
 const Button: React.FC<ButtonProps> = ({
   label,
   height = "2rem",
   width = "auto",
-  buttonType = "type1",
+  buttonType = "primary",
 }) => {
   return (
     <ButtonContainer height={height} width={width} buttonType={buttonType}>

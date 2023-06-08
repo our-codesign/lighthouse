@@ -14,8 +14,8 @@ const Header: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const isMobile = useWindowWidth() <= parseInt(size.md);
 
-  const logoWidth = isMobile ? 220 : 200;
-  const logoHeight = isMobile ? 80 : 60;
+  const logoWidth = isMobile ? 220 : 220;
+  const logoHeight = isMobile ? 80 : 80;
   const buttonWidth = isMobile ? "160PX" : "160px";
   const buttonHeight = isMobile ? "55px" : "55px";
 
@@ -44,6 +44,7 @@ const Header: React.FC = () => {
           width={logoWidth}
           height={logoHeight}
         />
+
         {!isMobile && (
           <Menu>
             <MenuItem>{messages.home}</MenuItem>
@@ -58,7 +59,7 @@ const Header: React.FC = () => {
           width={buttonWidth}
           height={buttonHeight}
           label={messages.buttonText}
-          buttonType="type1"
+          buttonType="primary"
         />
       </FirstHeader>
 
@@ -80,7 +81,7 @@ const Header: React.FC = () => {
 
         <Button
           width={buttonWidth}
-          buttonType="type1"
+          buttonType="primary"
           height={buttonHeight}
           label={messages.buttonText}
         />

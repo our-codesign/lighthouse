@@ -5,7 +5,7 @@ interface ButtonContainerProps
   extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   height: string;
   width: string;
-  buttonType: "type1" | "type2";
+  buttonType: "primary" | "secondary" | "tertiary";
 }
 
 export const ButtonContainer = styled.button<ButtonContainerProps>`
@@ -18,14 +18,14 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   font-weight: bold;
 
   ${(props) =>
-    props.buttonType === "type1" &&
+    props.buttonType === "primary" &&
     css`
       color: black;
       background-color: ${colors.secondary};
     `}
 
   ${(props) =>
-    props.buttonType === "type2" &&
+    props.buttonType === "secondary" &&
     css`
       color: white;
       background: linear-gradient(
@@ -34,6 +34,18 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
         ${colors.primary}
       );
       border: 2px solid ${colors.secondary};
+    `}
+
+  ${(props) =>
+    props.buttonType === "tertiary" &&
+    css`
+      color: white;
+      background: linear-gradient(
+        to right,
+        ${colors.secondary},
+        ${colors.primary}
+      );
+      border: 2px solid black;
     `}
 
   &:hover {

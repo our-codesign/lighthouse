@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
-import logo2 from "../../assets/images/logo2SizeBig.png";
-import Button from "../button";
+import logo2 from "../../../assets/images/logo2SizeBig.png";
+import Button from "../../button";
 import {
   TrustContainer,
   LabelSection,
@@ -12,8 +12,9 @@ import {
 } from "./styles";
 
 import messages from "./messages";
-import useWindowWidth from "../../service/hooks/useWindowWidth";
-import { size } from "../../contants/breakpoints";
+import useWindowWidth from "../../../service/hooks/useWindowWidth";
+import { size } from "../../../contants/breakpoints";
+import TitleComponent from "../../title";
 
 const TrustSection: React.FC = () => {
   const isMobile = useWindowWidth() <= parseInt(size.md);
@@ -33,7 +34,7 @@ const TrustSection: React.FC = () => {
           <Image src={logo2} alt="Logo" />
         </ImageContainer>
         <TextContainer>
-          <h2>{messages.youInControl}</h2>
+          <TitleComponent>{messages.youInControl}</TitleComponent>
           <p>{messages.loremIpsum}</p>
           <p style={{ marginBottom: "3rem" }}>{messages.loremIpsumShort}</p>
 
@@ -41,7 +42,7 @@ const TrustSection: React.FC = () => {
             label={messages.learnMore}
             height="70px"
             width={buttonWidth}
-            buttonType="type2"
+            buttonType="secondary"
           />
         </TextContainer>
       </ControlSection>

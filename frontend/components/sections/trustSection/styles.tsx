@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import colors from "../../contants/colors";
-import { breakpoints } from "../../contants/breakpoints";
+import colors from "../../../contants/colors";
+import { breakpoints } from "../../../contants/breakpoints";
 
 export const TrustContainer = styled.section`
   margin-top: -185px;
@@ -21,7 +21,7 @@ export const LabelSection = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 65%;
+  width: 71%;
   background-color: ${colors.primary};
   padding: 1rem;
   height: 12vh;
@@ -113,9 +113,6 @@ export const TextContainer = styled.div`
   h2 {
     margin-bottom: 1rem;
     width: 80%;
-    color: white;
-    font-size: 3rem;
-    font-weight: bold;
   }
 
   p {
@@ -138,5 +135,12 @@ export const TextContainer = styled.div`
     display: flex;
     align-items: center;
     justify-content: center;
+
+    @media ${breakpoints.md} {
+    }
+
+    p {
+      font-size: 20px;
+    }
   }
 `;
