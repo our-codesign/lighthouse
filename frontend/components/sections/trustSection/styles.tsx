@@ -5,15 +5,21 @@ import { breakpoints } from "../../../contants/breakpoints";
 export const TrustContainer = styled.section`
   margin-top: -185px;
   width: 100%;
-  height: 100vh;
+  height: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
   background: none;
   position: relative;
   z-index: 1;
+  padding-top: 100px;
+  padding-bottom: 80px;
+
   @media ${breakpoints.md} {
     margin-top: -300px;
+  }
+  @media ${breakpoints.md} {
+    padding-bottom: 0px;
   }
 `;
 

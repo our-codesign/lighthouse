@@ -11,6 +11,8 @@ import InviteSection from "../components/sections/inviteSection.tsx/index";
 import ExperienceSection from "../components/sections/experienceSection/index";
 import ControlSection from "../components/sections/controlSection/index";
 import OptimizedStrategies from "../components/sections/optimizedStrategie/index";
+import ContactUsSection from "../components/sections/contactUsSection/index";
+import Footer from "../components/sections/footer/index";
 
 const Home = () => {
   return (
@@ -24,6 +26,9 @@ const Home = () => {
       <ExperienceSection />
       <ControlSection />
       <OptimizedStrategies />
+      <ContactUsSection />
+
+      <Footer />
     </Container>
   );
 };

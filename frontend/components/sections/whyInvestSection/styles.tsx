@@ -20,7 +20,7 @@ export const WhyInvestContainer = styled.section`
     }
   }
   @media ${breakpoints.md} {
-    padding-top: 200px;
+    padding-top: 100px;
   }
 `;
 
