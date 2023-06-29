@@ -2,7 +2,7 @@ import HeaderLink from "../HeaderLink";
 
 export default function Header() {
   return (
-    <header className="bg-primary h-xxxl border-b-8 border-secondary flex items-center justify-between py-lg px-lg w-full">
+    <header className="bg-primary h-xxxl border-b-8 border-secondary flex items-center justify-between py-lg px-lg w-full fixed	">
       <h1
         className="text-secondary"
         style={{ font: "normal normal normal 30px Aboreto" }}
