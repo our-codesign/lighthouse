@@ -6,7 +6,9 @@ export const ButtonContainer = styled.button`
   cursor: pointer;
   font-size: 1.2rem;
   font-weight: bold;
+  white-space: nowrap;
 
+  z-index: 999;
   &:hover {
     opacity: 0.8;
   }
