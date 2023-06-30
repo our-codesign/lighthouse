@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  height: 100vh;
+  min-height: 800px;
   width: 100%;
   background-color: #0b1b37;
   display: flex;
@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
     padding: 0px;
     justify-content: center;
     flex-direction: column;
+    min-height: 800px;
   }
 `;
 
@@ -25,9 +26,11 @@ export const CardImage = styled.div`
   margin-top: -100px;
 
   @media (max-width: 1000px) {
-    margin-left: 0px;
+    margin-left: -200px;
+    object-fit: contain;
     margin-top: 0px;
-    width: 90%;
+    width: auto;
+    height: 700px;
   }
 `;
 
@@ -42,6 +45,7 @@ export const CardText = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding-top: 100px;
   }
 `;
 

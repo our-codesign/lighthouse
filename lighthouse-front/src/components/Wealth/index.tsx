@@ -22,7 +22,7 @@ const Wealth = () => (
         mercado financeiro mundial mais importante, onde as grandes
         oportunidades estão presentes.
       </Text>
-      <Button type="primary">Conheça Mais</Button>
+      <Button type="secondary">Conheça Mais</Button>
     </CardText>
 
     <CardImage />
