@@ -46,6 +46,7 @@ module.exports = {
         xxxl: "96px",
         huge: "104px",
         giant: "112px",
+        400: "400px",
         40: "10rem",
         2: "0.5rem",
       },

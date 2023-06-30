@@ -1,9 +1,11 @@
+"use-client";
 import locationIcon from "../../assets/images/locationIcon.png";
 import phoneIcon from "../../assets/images/phoneIcon.png";
 import emailIcon from "../../assets/images/emailIcon.png";
 import logoImage from "../../assets/images/logo2SizeBig.png";
 import { messages } from "./messages";
 import Image from "next/image";
+import { FooterContainer } from "./styles";
 
 const Footer = () => {
   const contactInfo = [
@@ -34,17 +36,7 @@ const Footer = () => {
   ];
 
   return (
-    <footer
-      style={{
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        paddingTop: "40px",
-        maxHeight: "400px",
-        boxSizing: "border-box",
-      }}
-      className="w-full bg-primary border-t-[10px] border-secondary flex justify-center items-start py-6 mt-auto"
-    >
+    <FooterContainer>
       <div
         className="flex items-center "
         style={{
@@ -80,7 +72,6 @@ const Footer = () => {
               className="text-white text-lg font-bold uppercase mb-2"
               style={{
                 fontFamily: "Marine",
-                fontSize: "1px",
                 fontWeight: "bolder",
                 width: 200,
               }}
@@ -145,7 +136,7 @@ const Footer = () => {
       >
         Feito por vp digital
       </p>
-    </footer>
+    </FooterContainer>
   );
 };
 

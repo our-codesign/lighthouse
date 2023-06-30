@@ -1,3 +1,4 @@
+"use-client";
 type HeaderLinkProps = {
   children: React.ReactNode;
   isActive?: boolean;

@@ -1,3 +1,4 @@
+"use-client";
 import HeaderLink from "../HeaderLink";
 
 export default function Header() {
