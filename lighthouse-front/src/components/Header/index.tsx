@@ -1,25 +1,22 @@
 "use-client";
+import Button from "../Button";
 import HeaderLink from "../HeaderLink";
+import { HeaderContainer, LogoText, LinksContainer } from "./styles";
 
 export default function Header() {
   return (
-    <header className="bg-primary h-xxxl border-b-8 border-secondary flex items-center justify-between py-lg px-lg w-full fixed	">
-      <h1
-        className="text-secondary"
-        style={{ font: "normal normal normal 30px Aboreto" }}
-      >
-        LIGHTHOUSE
-      </h1>
-      <div className="flex items-center gap-xxxs">
+    <HeaderContainer>
+      <LogoText>LIGHTHOUSE</LogoText>
+      <LinksContainer>
         <HeaderLink isActive>Home</HeaderLink>
         <HeaderLink>Quem Somos</HeaderLink>
         <HeaderLink>Soluções</HeaderLink>
         <HeaderLink>Metodologia</HeaderLink>
         <HeaderLink>Blog</HeaderLink>
-      </div>
-      <button className="text-black bg-secondary p-4 px-sm rounded font-bold hover:bg-secondaryDarker ">
+      </LinksContainer>
+      <Button type="primary" height={51} width={183}>
         Contato
-      </button>
-    </header>
+      </Button>
+    </HeaderContainer>
   );
 }

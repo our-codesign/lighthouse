@@ -1,50 +1,47 @@
 "use-client";
 import React from "react";
+import { ButtonContainer } from "./styles";
 
-export enum ButtonType {
-  PRIMARY = "primary",
-  SECONDARY = "secondary",
-  TERTIARY = "tertiary",
-}
+export type ButtonType = "primary" | "secondary";
 
 interface ButtonProps {
   type: ButtonType;
   children: React.ReactNode;
-  width?: string;
-  height?: string;
-  fontSize?: string;
-  onClick?: () => void;
+  height?: number;
+  width?: number;
 }
 
-const Button: React.FC<ButtonProps> = ({
-  type,
-  children,
-  width = "px-8",
-  height = "py-4",
-  fontSize = "font-bold",
-  onClick,
-}) => {
-  let style: string;
+const Button: React.FC<ButtonProps> = ({ type, children, height, width }) => {
+  const colors = {
+    primary: "#0b1c38",
+    secondary: "#dbc68f",
+  };
+  const buttonColor = {
+    primary: "black",
+    secondary: "white",
+  };
+  const buttonBackgroundColor = {
+    primary: colors.secondary,
+    secondary: `linear-gradient(to right, ${colors.secondary}, ${colors.primary});`,
+  };
 
-  switch (type) {
-    case ButtonType.PRIMARY:
-      style = `bg-secondary text-black ${width} ${height} rounded ${fontSize} hover:bg-secondaryDarker`;
-      break;
-    case ButtonType.SECONDARY:
-      style = `bg-gradient-to-r from-secondary to-primary border-2 border-secondary text-white ${width} ${height} rounded ${fontSize} hover:bg-secondaryDarker`;
-      break;
-    case ButtonType.TERTIARY:
-      style = `bg-transparent border-2 border-secondary text-white ${width} ${height} rounded-lg ${fontSize} hover:bg-secondaryDarker`;
-      break;
-
-    default:
-      style = `bg-secondary text-black px-4 py-2 rounded ${fontSize} hover:bg-secondaryDarker`;
-  }
+  const border = {
+    primary: "none",
+    secondary: `border: 2px solid ${colors.secondary}`,
+  };
 
   return (
-    <button className={style} onClick={onClick}>
+    <ButtonContainer
+      style={{
+        color: buttonColor[type],
+        backgroundColor: buttonBackgroundColor[type],
+        border: border[type],
+        height,
+        width,
+      }}
+    >
       {children}
-    </button>
+    </ButtonContainer>
   );
 };
 
