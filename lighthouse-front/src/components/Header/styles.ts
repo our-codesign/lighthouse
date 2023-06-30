@@ -8,13 +8,12 @@ export const HeaderContainer = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 23px 95px;
+  padding: 23px 5%;
   width: 100%;
   position: fixed;
   box-sizing: border-box;
-  @media (max-width: 768px) {
-    flex-direction: column;
-    padding: 20px 0;
+  @media (max-width: 884px) {
+    padding: 30px;
   }
 `;
 
@@ -27,4 +26,7 @@ export const LinksContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  @media (max-width: 884px) {
+    display: none;
+  }
 `;

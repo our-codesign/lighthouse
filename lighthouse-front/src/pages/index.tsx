@@ -1,12 +1,13 @@
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import MainSession from "@/components/MainSession";
 
 export default function Home() {
   return (
     <div>
       <Header />
-      <div style={{ height: 100000 }}></div>
-      <Footer />
+      <MainSession />
+      {/* <Footer /> */}
     </div>
   );
 }

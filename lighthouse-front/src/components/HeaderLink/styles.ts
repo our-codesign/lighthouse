@@ -8,6 +8,7 @@ export const LinkButton = styled.button`
   font-weight: bold;
   font-size: 14px;
   cursor: pointer;
+  white-space: nowrap;
   font: normal normal Open Sans;
   padding: 8px;
 
