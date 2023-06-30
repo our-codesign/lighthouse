@@ -1,5 +1,4 @@
-("");
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const LinkButton = styled.button`
   color: #dbc68f;

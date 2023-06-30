@@ -10,6 +10,7 @@ import {
   CardTitle,
   CardDescription,
 } from "./styles";
+import Button from "../Button/index";
 
 export default function ExperienceSession() {
   return (
@@ -40,24 +41,63 @@ export default function ExperienceSession() {
 
         <GlowingCard>
           <CardTitle>CONSULTORIA JURÍDICA</CardTitle>
-          <CardDescription>
-            Aspectos legais sobre <br /> ativos de investidores
-            <br /> brasileiros em
-            <br />
-            jurisdição internacional
-          </CardDescription>
+          <ExperienceDescriptionCard>
+            <CardDescription>
+              Aspectos legais sobre <br /> ativos de investidores
+              <br /> brasileiros em
+              <br />
+              jurisdição internacional
+            </CardDescription>
+          </ExperienceDescriptionCard>
         </GlowingCard>
 
         <GlowingCard>
           <CardTitle>CONSULTORIA TRIBUTÁRIA</CardTitle>
+          <ExperienceDescriptionCard>
+            <CardDescription>
+              Jurisdições favoráveis
+              <br /> a tributação de investimento
+              <br /> de brasileiros
+            </CardDescription>
+          </ExperienceDescriptionCard>
+          <ExperienceDescriptionCard>
+            <CardDescription>
+              Pagando menos
+              <br /> impostos
+            </CardDescription>
+          </ExperienceDescriptionCard>
         </GlowingCard>
         <GlowingCard>
           <CardTitle>CONSULTORIA FINANCEIRA</CardTitle>
+          <ExperienceDescriptionCard>
+            <CardDescription>
+              Construindo um <br />
+              portfólio de ativos
+              <br /> diversificados
+            </CardDescription>
+          </ExperienceDescriptionCard>
+          <ExperienceDescriptionCard>
+            <CardDescription>
+              Gestão ativa de
+              <br />
+              portfólios financeiros
+            </CardDescription>
+          </ExperienceDescriptionCard>
         </GlowingCard>
         <GlowingCard>
           <CardTitle>TRADING STRATEGIES</CardTitle>
+          <ExperienceDescriptionCard>
+            <CardDescription>
+              Usando estratégias de <br />
+              opções de forma segura <br />e inovadora para <br /> geração de
+              renda
+            </CardDescription>
+          </ExperienceDescriptionCard>
         </GlowingCard>
       </GlowingCardsContainer>
+      <Button type="secondary" height={66} width={"35%"} minWidth={200}>
+        CONHEÇA NOSSO MÉTODO
+      </Button>
     </ExperienceContainer>
   );
 }

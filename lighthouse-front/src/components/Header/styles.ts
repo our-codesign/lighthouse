@@ -1,5 +1,4 @@
-("");
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   background-color: #0b1c38;

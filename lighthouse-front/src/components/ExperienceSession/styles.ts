@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const ExperienceContainer = styled.div`
   width: 100%;
@@ -46,6 +46,9 @@ export const CardDescription = styled.p`
   text-align: center;
   font: normal normal 300 20px/21px Times New Roman;
   letter-spacing: 0px;
+  @media (max-width: 884px) {
+    display: none;
+  }
   color: #fafafa;
   opacity: 1;
   z-index: 999;
@@ -77,13 +80,30 @@ export const GlowingCardsContainer = styled.div`
   display: flex;
   z-index: 999;
   margin-top: 70px;
+  margin-bottom: 70px;
   align-items: center;
   width: 90%;
   gap: 20px;
+  overflow: auto;
+  padding-bottom: 10px;
+  @media (max-width: 884px) {
+    flex-wrap: wrap;
+  }
+  &::-webkit-scrollbar {
+    background-color: transparent;
+    width: 5px;
+    height: 5px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #dbc68f;
+    border-radius: 5px;
+  }
 `;
 
 export const GlowingCard = styled.div`
   min-height: 250px;
+  max-height: 250px;
+  min-width: 180px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -93,6 +113,14 @@ export const GlowingCard = styled.div`
   border-radius: 20px;
   opacity: 1;
   z-index: 999;
+  @media (max-width: 884px) {
+    min-height: 100px;
+    max-height: 100px;
+    padding: 0;
+    top: 0;
+
+    box-sizing: border-box;
+  }
   gap: 40px;
   padding: 50px 20px;
 `;
