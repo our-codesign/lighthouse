@@ -23,7 +23,7 @@ const Button: React.FC<ButtonProps> = ({ type, children, height, width }) => {
   };
   const buttonBackgroundColor = {
     primary: colors.secondary,
-    secondary: `linear-gradient(to right, ${colors.secondary}, ${colors.primary});`,
+    secondary: `linear-gradient(to right, ${colors.secondary}, ${colors.primary})`,
     tertiary: "transparent",
   };
 
@@ -54,7 +54,7 @@ const Button: React.FC<ButtonProps> = ({ type, children, height, width }) => {
     <ButtonContainer
       style={{
         color: buttonColor[type],
-        backgroundColor: buttonBackgroundColor[type],
+        background: buttonBackgroundColor[type],
         border: border[type],
         borderRadius: borderRadius[type],
         font: font[type],
