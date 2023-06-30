@@ -54,7 +54,7 @@ const Footer = () => {
 
         <FooterColumnWrapper>
           <FooterColumn>
-            <FooterItem className="title">{messages.contactUs}</FooterItem>
+            <FooterItem>{messages.contactUs}</FooterItem>
             {contactInfo.map((info, index) => (
               <FooterItem key={index}>
                 <Image src={info.icon} alt={info.alt} width={24} height={24} />
@@ -63,7 +63,7 @@ const Footer = () => {
             ))}
           </FooterColumn>
           <FooterColumn>
-            <FooterItem className="title">{messages.menu}</FooterItem>
+            <FooterItem>{messages.menu}</FooterItem>
             {menuItems.map((item, index) => (
               <FooterItem key={index}>{item}</FooterItem>
             ))}

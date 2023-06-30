@@ -27,7 +27,6 @@ export default function MainSession() {
 
   useEffect(() => {
     if (!screenSize) setDimension();
-    console.log("entrou aqui, ", screenSize?.dynamicWidth);
     window.addEventListener("resize", setDimension);
 
     return () => {
