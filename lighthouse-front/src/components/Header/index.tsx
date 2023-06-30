@@ -16,7 +16,6 @@ export default function Header() {
   };
 
   useEffect(() => {
-    setDimension();
     window.addEventListener("resize", setDimension);
 
     return () => {
@@ -34,12 +33,12 @@ export default function Header() {
         <HeaderLink>Metodologia</HeaderLink>
         <HeaderLink>Blog</HeaderLink>
       </LinksContainer>
-      {screenSize?.dynamicWidth >= 884 && (
+      {(screenSize?.dynamicWidth || 0) >= 884 && (
         <Button type="primary" height={51} width={183}>
           Contato
         </Button>
       )}
-      {screenSize?.dynamicWidth < 884 && <BurguerMenu />}
+      {(screenSize?.dynamicWidth || 0) < 884 && <BurguerMenu />}
     </HeaderContainer>
   );
 }

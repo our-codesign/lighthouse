@@ -7,6 +7,8 @@ export const MainSessionContainer = styled.div`
   top: 146px;
   background-size: cover;
   background-position: center;
+  display: flex;
+  align-items: center;
   position: relative;
 `;
 
@@ -24,6 +26,7 @@ export const MainSessionTitle = styled.h1`
   font: normal normal normal 80px/92px Aboreto;
   letter-spacing: 1px;
   color: #dbc68f;
+
   margin: 0;
   position: absolute;
   z-index: 999;
