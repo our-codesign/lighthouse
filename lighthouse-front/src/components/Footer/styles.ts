@@ -5,12 +5,11 @@ export const FooterContainer = styled.footer`
   background-color: #0b1c38;
   border-top: 10px solid #dbc68f;
   display: flex;
-  margin-top: 10rem;
   justify-content: center;
   position: absolute;
   align-items: center;
   padding: 50px 0px;
-  bottom: 0;
+  bottom: 0px;
 
   @media (max-width: 768px) {
     flex-direction: column;
@@ -81,6 +80,7 @@ export const FooterColumn = styled.div`
 export const FooterItem = styled.div`
   color: white;
   margin: 4px 0;
+  min-width: 200px;
   display: flex;
   align-items: center;
 
