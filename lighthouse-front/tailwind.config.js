@@ -15,6 +15,7 @@ module.exports = {
         4: "4px",
         6: "6px",
         8: "8px",
+        10: "10px", // Adicionado para o Footer
       },
       colors: {
         primary: "#0b1c38",
@@ -45,6 +46,8 @@ module.exports = {
         xxxl: "96px",
         huge: "104px",
         giant: "112px",
+        40: "10rem",
+        2: "0.5rem",
       },
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
