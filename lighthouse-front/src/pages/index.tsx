@@ -4,10 +4,10 @@ import MainSession from "@/components/MainSession";
 
 export default function Home() {
   return (
-    <div>
+    <>
       <Header />
       <MainSession />
       {/* <Footer /> */}
-    </div>
+    </>
   );
 }

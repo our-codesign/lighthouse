@@ -5,8 +5,9 @@ import HeaderLink from "../HeaderLink";
 import { HeaderContainer, LogoText, LinksContainer } from "./styles";
 import { useState, useEffect } from "react";
 
+type Screensize = { dynamicWidth: number; dynamicHeight: number };
 export default function Header() {
-  const [screenSize, getDimension] = useState();
+  const [screenSize, getDimension] = useState<Screensize>();
   const setDimension = () => {
     getDimension({
       dynamicWidth: window.innerWidth,
@@ -15,10 +16,7 @@ export default function Header() {
   };
 
   useEffect(() => {
-    getDimension({
-      dynamicWidth: window.innerWidth,
-      dynamicHeight: window.innerHeight,
-    });
+    setDimension();
     window.addEventListener("resize", setDimension);
 
     return () => {
