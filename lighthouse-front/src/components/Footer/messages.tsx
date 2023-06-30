@@ -1,4 +1,4 @@
-"use-client";
+("");
 export const messages = {
   contactUs: "Fale Conosco",
   menu: "Menu",
