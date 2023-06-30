@@ -1,5 +1,3 @@
-"use-client";
-
 import {
   MainSessionContainer,
   Filter,
@@ -14,6 +12,10 @@ import {
 import Button from "../Button";
 import { useState, useEffect } from "react";
 
+export type Screensize = {
+  dynamicWidth: number;
+  dynamicHeight: number;
+};
 export default function MainSession() {
   const [screenSize, getDimension] = useState<Screensize>();
   const setDimension = () => {
