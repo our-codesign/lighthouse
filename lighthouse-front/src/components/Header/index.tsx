@@ -6,10 +6,7 @@ import { HeaderContainer, LogoText, LinksContainer } from "./styles";
 import { useState, useEffect } from "react";
 
 export default function Header() {
-  const [screenSize, getDimension] = useState({
-    dynamicWidth: window.innerWidth,
-    dynamicHeight: window.innerHeight,
-  });
+  const [screenSize, getDimension] = useState();
   const setDimension = () => {
     getDimension({
       dynamicWidth: window.innerWidth,
@@ -18,6 +15,10 @@ export default function Header() {
   };
 
   useEffect(() => {
+    getDimension({
+      dynamicWidth: window.innerWidth,
+      dynamicHeight: window.innerHeight,
+    });
     window.addEventListener("resize", setDimension);
 
     return () => {
@@ -35,12 +36,12 @@ export default function Header() {
         <HeaderLink>Metodologia</HeaderLink>
         <HeaderLink>Blog</HeaderLink>
       </LinksContainer>
-      {screenSize.dynamicWidth >= 884 && (
+      {screenSize?.dynamicWidth >= 884 && (
         <Button type="primary" height={51} width={183}>
           Contato
         </Button>
       )}
-      {screenSize.dynamicWidth < 884 && <BurguerMenu />}
+      {screenSize?.dynamicWidth < 884 && <BurguerMenu />}
     </HeaderContainer>
   );
 }

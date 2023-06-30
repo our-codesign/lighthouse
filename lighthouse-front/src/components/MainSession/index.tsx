@@ -1,7 +1,12 @@
 "use-client";
 
-import { MainSessionContainer } from "./styles";
+import { MainSessionContainer, Filter, MainSessionTitle } from "./styles";
 
 export default function MainSession() {
-  return <MainSessionContainer></MainSessionContainer>;
+  return (
+    <MainSessionContainer>
+      <Filter />
+      <MainSessionTitle>SIMPLIFICANDO INVESTIMENTOS</MainSessionTitle>
+    </MainSessionContainer>
+  );
 }

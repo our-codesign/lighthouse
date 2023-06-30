@@ -11,7 +11,9 @@ export const HeaderContainer = styled.header`
   padding: 23px 5%;
   width: 100%;
   position: fixed;
+  top: 0;
   box-sizing: border-box;
+  z-index: 99999999;
   @media (max-width: 884px) {
     padding: 30px;
   }
