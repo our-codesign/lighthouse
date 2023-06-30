@@ -1,3 +1,4 @@
+import ExperienceSession from "@/components/ExperienceSession";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
 import MainSession from "@/components/MainSession";
@@ -15,6 +16,7 @@ export default function Home() {
       <Header />
       <MainSession />
       <Wealth />
+      <ExperienceSession />
       <Footer />
     </div>
   );
