@@ -1,4 +1,5 @@
 import AdvancedTrading from "@/components/AdvancedTrading";
+import ContactUs from "@/components/ContactUs";
 import ExperienceSession from "@/components/ExperienceSession";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
@@ -19,6 +20,7 @@ export default function Home() {
       <Wealth />
       <ExperienceSession />
       <AdvancedTrading />
+      <ContactUs />
       <Footer />
     </div>
   );
