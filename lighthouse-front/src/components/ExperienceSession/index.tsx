@@ -95,9 +95,19 @@ export default function ExperienceSession() {
           </ExperienceDescriptionCard>
         </GlowingCard>
       </GlowingCardsContainer>
-      <Button type="secondary" height={66} width={"35%"} minWidth={200}>
-        CONHEÇA NOSSO MÉTODO
-      </Button>
+      <div
+        style={{
+          marginBottom: 30,
+          zIndex: 999,
+          width: "100%",
+          display: "flex",
+          justifyContent: "center",
+        }}
+      >
+        <Button type="secondary" height={66} width={"35%"} minWidth={200}>
+          CONHEÇA NOSSO MÉTODO
+        </Button>
+      </div>
     </ExperienceContainer>
   );
 }

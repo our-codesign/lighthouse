@@ -40,6 +40,10 @@ export const CardTitle = styled.h1`
   color: #dbc68f;
   margin: 0;
   z-index: 999;
+  @media (max-width: 884px) {
+    position: absolute;
+    top: 40%;
+  }
 `;
 
 export const CardDescription = styled.p`
@@ -118,7 +122,7 @@ export const GlowingCard = styled.div`
     max-height: 100px;
     padding: 0;
     top: 0;
-
+    position: relative;
     box-sizing: border-box;
   }
   gap: 40px;

@@ -1,4 +1,4 @@
-import { styled } from "styled-components";
+import styled from "styled-components";
 
 export const ButtonContainer = styled.button`
   border-radius: 4px;
@@ -8,7 +8,7 @@ export const ButtonContainer = styled.button`
   font-weight: bold;
   white-space: nowrap;
 
-  z-index: 999;
+  z-index: 999 !important;
   &:hover {
     opacity: 0.8;
   }
