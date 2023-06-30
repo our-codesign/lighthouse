@@ -16,13 +16,15 @@ const Wealth = () => (
         necessidades específicas de brasileiros interessados em diversificar seu
         patrimônio, de forma simples, segura e rentável.
       </Text>
-      <Text>
+      <Text style={{ marginBottom: 60 }}>
         LIGHTHOUSE é um conjunto de conhecimentos que se associam de forma a
         orientar você desde o início a se estruturar e participar ativamente do
         mercado financeiro mundial mais importante, onde as grandes
         oportunidades estão presentes.
       </Text>
-      <Button type="secondary">Conheça Mais</Button>
+      <Button type="secondary" height={66} width={"35%"} minWidth={200}>
+        CONHEÇA MAIS
+      </Button>
     </CardText>
 
     <CardImage />
