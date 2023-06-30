@@ -6,10 +6,8 @@ export const FooterContainer = styled.footer`
   border-top: 10px solid #dbc68f;
   display: flex;
   justify-content: center;
-  position: absolute;
   align-items: center;
   padding: 50px 0px;
-  bottom: 0px;
 
   @media (max-width: 768px) {
     flex-direction: column;

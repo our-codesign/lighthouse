@@ -8,7 +8,6 @@ export default function Home() {
     <div
       style={{
         height: "auto",
-        minHeight: "300vh",
         position: "relative",
         overflowX: "hidden",
       }}

@@ -1,14 +1,14 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  min-height: 800px;
+  min-height: 100vh;
   width: 100%;
   background-color: #0b1b37;
   display: flex;
   padding-left: 150px;
   padding-top: 280px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 884px) {
     padding: 0px;
     justify-content: center;
     flex-direction: column;
@@ -25,12 +25,12 @@ export const CardImage = styled.div`
   margin-left: -450px;
   margin-top: -100px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 884px) {
     margin-left: -200px;
     object-fit: contain;
-    margin-top: 0px;
     width: auto;
     height: 700px;
+    margin-top: -300px;
   }
 `;
 
@@ -40,7 +40,7 @@ export const CardText = styled.div`
   padding-top: 20px;
   z-index: 2;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 884px) {
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -56,9 +56,10 @@ export const Title = styled.h1`
   color: #fafafa;
   width: 651px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 884px) {
     width: 65%;
     text-align: center;
+    padding-top: 200px;
     font: normal normal normal 45px Aboreto;
   }
 `;
@@ -76,7 +77,7 @@ export const Text = styled.p`
   color: #fafafa;
   width: 651px;
 
-  @media (max-width: 1000px) {
+  @media (max-width: 884px) {
     width: 65%;
     text-align: center;
     text-align: left;
