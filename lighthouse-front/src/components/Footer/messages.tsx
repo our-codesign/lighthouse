@@ -13,4 +13,5 @@ export const messages = {
   privacyPolicy: "Política de Privacidade",
   cookiePolicy: "Política de Cookies",
   settings: "Configurações",
+  contact: "Contato",
 };

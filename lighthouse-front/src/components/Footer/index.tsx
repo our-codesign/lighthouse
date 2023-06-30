@@ -1,11 +1,19 @@
-"use-client";
+import React from "react";
+import {
+  FooterContainer,
+  FooterColumn,
+  FooterItem,
+  FooterBorder,
+  FooterColumnWrapper,
+  Container,
+  CardImage,
+} from "./styles";
 import locationIcon from "../../assets/images/locationIcon.png";
 import phoneIcon from "../../assets/images/phoneIcon.png";
 import emailIcon from "../../assets/images/emailIcon.png";
-import logoImage from "../../assets/images/logo2SizeBig.png";
-import { messages } from "./messages";
 import Image from "next/image";
-import { FooterContainer } from "./styles";
+import { messages } from "./messages";
+import LOGO from "../../assets/images/LOGO-LIGHTHOUSEBRANCO.png";
 
 const Footer = () => {
   const contactInfo = [
@@ -32,110 +40,37 @@ const Footer = () => {
     messages.solutions,
     messages.methodology,
     messages.blog,
-    messages.contactUs,
+    messages.contact,
   ];
 
   return (
     <FooterContainer>
-      <div
-        className="flex items-center "
-        style={{
-          gap: "35px",
-          display: "flex",
-          justifyContent: "space-between",
-          width: "80%",
-          marginBottom: "1rem",
-        }}
-      >
-        <div style={{ width: "30%" }}>
-          <Image
-            style={{
-              minWidth: "250px",
-            }}
-            src={logoImage}
-            alt="Logo"
-            width={250}
-            height={250}
-            className="mb-4"
-          />
-        </div>
+      <FooterBorder />
 
-        <div
-          style={{
-            width: "auto",
-            gap: "10vw",
-            display: "flex",
-          }}
-        >
-          <div className="flex flex-col mx-3">
-            <div
-              className="text-white text-lg font-bold uppercase mb-2"
-              style={{
-                fontFamily: "Marine",
-                fontWeight: "bolder",
-                width: 200,
-              }}
-            >
-              {messages.contactUs}
-            </div>
+      <Container>
+        <CardImage>
+          <Image src={LOGO} alt="logo branca" width={200} />
+        </CardImage>
+
+        <FooterColumnWrapper>
+          <FooterColumn>
+            <FooterItem className="title">{messages.contactUs}</FooterItem>
             {contactInfo.map((info, index) => (
-              <div
-                style={{ width: "200px" }}
-                className="text-white mb-1 flex items-center"
-                key={index}
-              >
-                <Image
-                  src={info.icon}
-                  alt={info.alt}
-                  width={40}
-                  height={40}
-                  className="mr-2"
-                />
+              <FooterItem key={index}>
+                <Image src={info.icon} alt={info.alt} width={24} height={24} />
                 {info.text}
-              </div>
+              </FooterItem>
             ))}
-          </div>
-
-          <div className="flex flex-col mx-3">
-            <div
-              className="text-white text-lg font-bold uppercase mb-2"
-              style={{
-                fontFamily: "Marine",
-                fontSize: "16px",
-                width: 200,
-                fontWeight: "bolder",
-              }}
-            >
-              {messages.home}
-            </div>
+          </FooterColumn>
+          <FooterColumn>
+            <FooterItem className="title">{messages.menu}</FooterItem>
             {menuItems.map((item, index) => (
-              <div
-                style={{ fontSize: "16px", height: "22px" }}
-                className="text-white text-xs mb-1"
-                key={index}
-              >
-                {item}
-              </div>
+              <FooterItem key={index}>{item}</FooterItem>
             ))}
-          </div>
-        </div>
-
-        <div style={{ width: "30%" }}></div>
-      </div>
-
-      <p
-        style={{
-          width: "auto",
-          textAlign: "center",
-          height: "17px",
-          font: "normal normal normal 15px/17px Aboreto",
-          letterSpacing: "1px",
-          textTransform: "uppercase",
-          color: "#DBC68F",
-        }}
-      >
-        Feito por vp digital
-      </p>
+          </FooterColumn>
+        </FooterColumnWrapper>
+        <div style={{ flex: 0.8 }}></div>
+      </Container>
     </FooterContainer>
   );
 };
