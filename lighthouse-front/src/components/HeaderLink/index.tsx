@@ -1,4 +1,7 @@
 "use-client";
+
+import { LinkButton } from "./styles";
+
 type HeaderLinkProps = {
   children: React.ReactNode;
   isActive?: boolean;
@@ -8,13 +11,6 @@ export default function HeaderLink({
   children,
   isActive = false,
 }: HeaderLinkProps) {
-  return (
-    <button
-      className={`text-secondary bg-transparent font-bold p-nano ${
-        isActive ? "border-b-2 border-secondary" : ""
-      } hover:border-b-2 border-secondary`}
-    >
-      {children}
-    </button>
-  );
+  const borderBottom = isActive ? "2px solid #dbc68f" : "";
+  return <LinkButton style={{ borderBottom }}>{children}</LinkButton>;
 }
