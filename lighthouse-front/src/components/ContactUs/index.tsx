@@ -10,6 +10,7 @@ import {
   LeftDivider,
   CardText,
   FormContainer,
+  CardItem,
 } from "./styles";
 import locationIcon from "../../assets/images/locationIcon.png";
 import phoneIcon from "../../assets/images/phoneIcon.png";
@@ -46,12 +47,14 @@ const ContactUs = () => (
     <CardText>
       <MainSessionTitle>Fale Conosco</MainSessionTitle>
       <LeftDivider />
-      {contactInfo.map((info, index) => (
-        <FooterItem key={index}>
-          <Image src={info.icon} alt={info.alt} />
-          {info.text}
-        </FooterItem>
-      ))}
+      <CardItem>
+        {contactInfo.map((info, index) => (
+          <FooterItem key={index}>
+            <Image src={info.icon} alt={info.alt} />
+            {info.text}
+          </FooterItem>
+        ))}
+      </CardItem>
     </CardText>
 
     <FormContainer>
@@ -67,7 +70,9 @@ const ContactUs = () => (
           placeholder="Email"
         />
         <TextArea name="message" placeholder="Escreva sua mensagem aqui" />
-        <Button type="primary">Enviar</Button>
+        <Button type="secondary" height={45}>
+          Enviar
+        </Button>
       </ContactForm>
     </FormContainer>
   </ContactContainer>
