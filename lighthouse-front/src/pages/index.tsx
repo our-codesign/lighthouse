@@ -3,6 +3,7 @@ import ContactUs from "@/components/ContactUs";
 import ExperienceSession from "@/components/ExperienceSession";
 import Footer from "@/components/Footer";
 import Header from "@/components/Header";
+import LighthousePhilosophySession from "@/components/LighthousePhilosophySession";
 import MainSession from "@/components/MainSession";
 import Wealth from "@/components/Wealth";
 
@@ -19,6 +20,7 @@ export default function Home() {
       <MainSession />
       <Wealth />
       <ExperienceSession />
+      <LighthousePhilosophySession />
       <AdvancedTrading />
       <ContactUs />
       <Footer />
