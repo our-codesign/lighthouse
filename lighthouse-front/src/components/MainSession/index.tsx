@@ -12,15 +12,7 @@ import {
 import Button from "../Button";
 import { useState, useEffect } from "react";
 import Dialog from "../Dialog";
-const sgMail = require("@sendgrid/mail");
-sgMail.setApiKey("MATEUS-123-321");
-const msg = {
-  to: "test@example.com", // Change to your recipient
-  from: "test@example.com", // Change to your verified sender
-  subject: "Sending with SendGrid is Fun",
-  text: "and easy to do anywhere, even with Node.js",
-  html: "<strong>and easy to do anywhere, even with Node.js</strong>",
-};
+
 export type Screensize = {
   dynamicWidth: number;
   dynamicHeight: number;
@@ -30,15 +22,7 @@ export default function MainSession() {
   const [isOpen, setIsOpen] = useState(false);
 
   const handleDialog = () => {
-    console.log("entrou");
-    sgMail
-      .send(msg)
-      .then(() => {
-        console.log("Email sent");
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+    setIsOpen((prev) => !prev);
   };
   const [screenSize, getDimension] = useState<Screensize>();
   const setDimension = () => {

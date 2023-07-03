@@ -10,7 +10,6 @@ interface ButtonProps {
   width?: number | string;
   onClick?: () => void;
   minWidth?: number | string;
-  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,7 +17,6 @@ const Button: React.FC<ButtonProps> = ({
   children,
   height,
   width,
-  onClick,
   minWidth,
   onClick,
 }) => {
@@ -80,7 +78,6 @@ const Button: React.FC<ButtonProps> = ({
         width,
         minWidth: minWidth,
       }}
-      onClick={onClick}
     >
       {children}
     </ButtonContainer>
