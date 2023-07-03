@@ -104,7 +104,7 @@ export default function ExperienceSession() {
           justifyContent: "center",
         }}
       >
-        <Button type="secondary" height={66} width={"35%"} minWidth={200}>
+        <Button type="secondary" height={66} width={"35%"} minWidth={300}>
           CONHEÇA NOSSO MÉTODO
         </Button>
       </div>
