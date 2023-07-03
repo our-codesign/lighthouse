@@ -29,7 +29,7 @@ export const CardText = styled.div`
 
 export const MainSessionTitle = styled.h1`
   text-align: center;
-  font: normal normal normal 42px Aboreto;
+  font: normal normal normal 35px Aboreto;
   letter-spacing: 1px;
   color: #dbc68f;
   margin: 0;
@@ -65,18 +65,17 @@ export const CardItem = styled.div`
     bottom: 30px;
     left: 0;
     right: 0;
-    margin-left: auto;
-    margin-right: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
 `;
 
 export const FooterItem = styled.div`
   color: white;
   margin: 3px 0;
-  font: normal normal bold 22px Times New Roman;
+  font: normal normal bold 18px Times New Roman;
   width: 105%;
   display: flex;
   align-items: center;
@@ -86,10 +85,10 @@ export const FooterItem = styled.div`
   }
 
   @media (max-width: 1000px) {
-    width: 60%;
+    width: auto;
+    min-width: 250px;
     font: normal normal bold 15px Times New Roman;
     margin: 0px;
-    min-width: 300px;
 
     img {
       width: 35px;
@@ -117,6 +116,7 @@ export const ContactForm = styled.form`
   .email {
     width: 100%;
   }
+
   @media (max-width: 1000px) {
     max-width: 600px;
     width: 95%;
@@ -127,6 +127,7 @@ export const InputRow = styled.div`
   display: flex;
   justify-content: space-between;
   gap: 25px;
+
   @media (max-width: 1000px) {
     gap: 15px;
   }

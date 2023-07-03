@@ -11,7 +11,7 @@ import {
 } from "./styles";
 
 const AdvancedTrading = () => (
-  <Wrapper>
+  <Wrapper id="blog">
     <CardImage />
 
     <CardText>
@@ -24,7 +24,7 @@ const AdvancedTrading = () => (
         <DescriptionSpan>UM MÉTODO PARA GERAR RENDA ADICIONAL</DescriptionSpan>
         <DescriptionSpan>PARA INVESTIDORES MAIS SOFISTICADOS</DescriptionSpan>
       </MainSessionDescription>
-      <Button type="secondary" height={66} width={"35%"} minWidth={300}>
+      <Button type="secondary" height={50} width={"35%"} minWidth={300}>
         ACESSSE NOSSO BLOG
       </Button>
     </CardText>

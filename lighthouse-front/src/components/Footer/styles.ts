@@ -78,14 +78,14 @@ export const FooterColumn = styled.div`
 export const FooterItem = styled.div`
   color: white;
   margin: 4px 0;
-  min-width: 200px;
   display: flex;
   align-items: center;
 
   img {
     margin-right: 8px;
   }
-
+  width: auto;
+  font-size: 15px;
   @media (max-width: 768px) {
     justify-content: center;
     img {

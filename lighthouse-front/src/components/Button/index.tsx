@@ -55,7 +55,7 @@ const Button: React.FC<ButtonProps> = ({
     primary: "normal normal bold 20px/27px Open Sans",
     secondary: "normal normal bold 18px Marine",
     tertiary: "normal normal normal 20px/37px Times New Roman",
-    tertiary: "normal normal normal 20px/37px Times New Roman",
+    round: "normal normal bold 20px/27px Open Sans", // added round property
   };
 
   const padding = {
@@ -64,6 +64,7 @@ const Button: React.FC<ButtonProps> = ({
     tertiary: "0 32px",
     round: "0px",
   };
+
   return (
     <ButtonContainer
       onClick={onClick}

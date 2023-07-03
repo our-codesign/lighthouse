@@ -1,4 +1,3 @@
-("");
 import Button from "../Button";
 import BurguerMenu from "../BurguerMenu";
 import HeaderLink from "../HeaderLink";
@@ -28,11 +27,11 @@ export default function Header() {
     <HeaderContainer>
       <LogoText>LIGHTHOUSE</LogoText>
       <LinksContainer>
-        <HeaderLink isActive>Home</HeaderLink>
-        <HeaderLink>Quem Somos</HeaderLink>
-        <HeaderLink>Soluções</HeaderLink>
-        <HeaderLink>Metodologia</HeaderLink>
-        <HeaderLink>Blog</HeaderLink>
+        <HeaderLink to="mainSession">Home</HeaderLink>
+        <HeaderLink to="quemSomos">Quem Somos</HeaderLink>
+        <HeaderLink to="solucoes">Soluções</HeaderLink>
+        <HeaderLink to="experienceSession">Metodologia</HeaderLink>
+        <HeaderLink to="blog">Blog</HeaderLink>
       </LinksContainer>
       {screenSize && screenSize.dynamicWidth >= 884 && (
         <Button type="primary" height={51} width={183}>

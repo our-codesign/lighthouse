@@ -3,7 +3,7 @@ import { Title, Text, Wrapper, CardText, CardImage, TitleSpan } from "./styles";
 import Button from "../Button/index";
 
 const Wealth = () => (
-  <Wrapper>
+  <Wrapper id="quemSomos">
     <CardText>
       <Title>
         <TitleSpan>VOCÊ NO COMANDO</TitleSpan>
