@@ -9,6 +9,7 @@ interface ButtonProps {
   height?: number | string;
   width?: number | string;
   minWidth?: number | string;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -17,6 +18,7 @@ const Button: React.FC<ButtonProps> = ({
   height,
   width,
   minWidth,
+  onClick,
 }) => {
   const colors = {
     primary: "#0b1c38",
@@ -69,6 +71,7 @@ const Button: React.FC<ButtonProps> = ({
         width,
         minWidth: minWidth,
       }}
+      onClick={onClick}
     >
       {children}
     </ButtonContainer>
