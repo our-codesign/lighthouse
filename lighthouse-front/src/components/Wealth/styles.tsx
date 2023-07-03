@@ -21,7 +21,6 @@ export const CardImage = styled.div`
   background-image: url("/SOBRE.png");
   background-size: cover;
   height: auto;
-  background-color: red;
   margin-left: -450px;
   margin-top: -100px;
 

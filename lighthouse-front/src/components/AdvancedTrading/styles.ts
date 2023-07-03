@@ -12,6 +12,7 @@ export const Wrapper = styled.div`
 
   @media (max-width: 1350px) {
     flex-direction: column-reverse;
+    padding-bottom: 0px;
   }
 `;
 
@@ -22,13 +23,15 @@ export const CardImage = styled.div`
   height: 700px;
 
   @media (max-width: 1350px) {
-    width: 100%;
-    height: 75vh;
-  }
-  @media (max-width: 860px) {
-    background-repeat: no-repeat;
+    width: auto;
+    min-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+    height: auto;
     background-size: contain;
-    height: 40vh;
+    background-repeat: no-repeat;
   }
 `;
 
