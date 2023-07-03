@@ -38,8 +38,8 @@ const Modal: React.FC<PropsWithChildren<TModalProps>> = ({
   if (!isVisible) return null;
 
   return (
-    <ModalContainer id="modal">
-      <ModalBackdrop onClick={handleBackdropClick} data-testid="modal-backdrop">
+    <ModalContainer>
+      <ModalBackdrop onClick={handleBackdropClick}>
         <ModalContent onClick={preventPropagation}>{children}</ModalContent>
       </ModalBackdrop>
     </ModalContainer>

@@ -40,7 +40,6 @@ export default function MyCarousel() {
 
   return (
     <Carousel
-      id="solucoes"
       showArrows={false}
       selectedItem={selectedIndex}
       showThumbs={false}
