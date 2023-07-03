@@ -17,7 +17,7 @@ export default function Home() {
       }}
     >
       <Header />
-      <MainSession />
+      {/*       <MainSession /> */}
       <Wealth />
       <ExperienceSession />
       <LighthousePhilosophySession />

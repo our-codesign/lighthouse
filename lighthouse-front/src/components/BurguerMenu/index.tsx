@@ -1,22 +1,39 @@
 import React, { useState } from "react";
-import styled, { css } from "styled-components";
+import styled from "styled-components";
+import HeaderLink from "../HeaderLink";
 
-const BurgerMenu = () => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const handleToggle = () => {
-    setIsOpen(!isOpen);
-  };
-
-  return (
-    <Wrapper onClick={handleToggle}>
-      <Bar />
-      <Bar />
-      <Bar />
-    </Wrapper>
-  );
+type SidebarProps = {
+  isOpen: boolean;
 };
 
+// Estilos para a barra lateral
+const Sidebar = styled.div<SidebarProps>`
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 250px;
+  height: 100vh;
+  background: #0b1c38;
+  box-shadow: -2px 0px 5px rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  transform: translateX(${({ isOpen }) => (isOpen ? "0" : "100%")});
+  transition: transform 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`;
+
+// Estilos para o botão de fechamento
+const CloseButton = styled.button`
+  align-self: flex-end;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+`;
+
+// Estilos para o menu de hambúrguer
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
@@ -36,22 +53,47 @@ const Bar = styled.div`
   &:not(:last-child) {
     margin-bottom: 5px;
   }
-
-  ${Wrapper}:hover & {
-    background-color: ${({ theme }) => theme.menuBarColor};
-  }
-
-  ${Wrapper}:hover:first-child & {
-    transform: rotate(45deg) translate(2px, 2px);
-  }
-
-  ${Wrapper}:hover:nth-child(2) & {
-    opacity: 0;
-  }
-
-  ${Wrapper}:hover:last-child & {
-    transform: rotate(-45deg) translate(2px, -2px);
-  }
 `;
+
+const BurgerMenu = () => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  const handleToggle = () => {
+    setIsOpen(!isOpen);
+  };
+
+  const closeSidebar = () => {
+    setIsOpen(false);
+  };
+
+  return (
+    <div>
+      <Wrapper onClick={handleToggle}>
+        <Bar />
+        <Bar />
+        <Bar />
+      </Wrapper>
+
+      <Sidebar isOpen={isOpen}>
+        <CloseButton onClick={closeSidebar}>X</CloseButton>
+        <HeaderLink onClick={closeSidebar} to="mainSession">
+          Home
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="quemSomos">
+          Quem Somos
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="solucoes">
+          Soluções
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="experienceSession">
+          Metodologia
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="blog">
+          Blog
+        </HeaderLink>
+      </Sidebar>
+    </div>
+  );
+};
 
 export default BurgerMenu;

@@ -1,4 +1,3 @@
-("");
 import Button from "../Button";
 import BurguerMenu from "../BurguerMenu";
 import HeaderLink from "../HeaderLink";
