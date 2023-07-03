@@ -14,6 +14,7 @@ import emailIcon from "../../assets/images/emailIcon.png";
 import Image from "next/image";
 import { messages } from "./messages";
 import LOGO from "../../assets/images/LOGO-LIGHTHOUSEBRANCO.png";
+import { Link } from "react-scroll";
 
 const Footer = () => {
   const contactInfo = [
@@ -35,12 +36,12 @@ const Footer = () => {
   ];
 
   const menuItems = [
-    messages.home,
-    messages.whoWeAre,
-    messages.solutions,
-    messages.methodology,
-    messages.blog,
-    messages.contact,
+    { text: messages.home, id: "home" },
+    { text: messages.whoWeAre, id: "quemSomos" },
+    { text: messages.solutions, id: "solucoes" },
+    { text: messages.methodology, id: "metodologia" },
+    { text: messages.blog, id: "blog" },
+    { text: messages.contact, id: "fale-conosco" },
   ];
 
   return (
@@ -65,7 +66,17 @@ const Footer = () => {
           <FooterColumn>
             <FooterItem>{messages.menu}</FooterItem>
             {menuItems.map((item, index) => (
-              <FooterItem key={index}>{item}</FooterItem>
+              <Link
+                activeClass="active"
+                to={item.id}
+                spy={true}
+                smooth={true}
+                offset={-70}
+                duration={500}
+                key={index}
+              >
+                <FooterItem>{item.text}</FooterItem>
+              </Link>
             ))}
           </FooterColumn>
         </FooterColumnWrapper>

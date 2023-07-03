@@ -27,11 +27,12 @@ export default function Header() {
     <HeaderContainer>
       <LogoText>LIGHTHOUSE</LogoText>
       <LinksContainer>
-        <HeaderLink to="mainSession">Home</HeaderLink>
+        <HeaderLink to="home">Home</HeaderLink>
         <HeaderLink to="quemSomos">Quem Somos</HeaderLink>
         <HeaderLink to="solucoes">Soluções</HeaderLink>
-        <HeaderLink to="experienceSession">Metodologia</HeaderLink>
+        <HeaderLink to="metodologia">Metodologia</HeaderLink>
         <HeaderLink to="blog">Blog</HeaderLink>
+        <HeaderLink to="fale-conosco">Fale Conosco</HeaderLink>
       </LinksContainer>
       {screenSize && screenSize.dynamicWidth >= 884 && (
         <Button type="primary" height={51} width={183}>

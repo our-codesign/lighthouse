@@ -11,10 +11,11 @@ import {
   CardDescription,
 } from "./styles";
 import Button from "../Button/index";
+import { Link } from "react-scroll";
 
 export default function ExperienceSession() {
   return (
-    <ExperienceContainer>
+    <ExperienceContainer id="solucoes">
       <Filter />
       <div style={{ paddingTop: 200, zIndex: 999 }}>
         <ExperienceTitle>EXPERIÊNCIA E MÉTODO</ExperienceTitle>
@@ -104,9 +105,18 @@ export default function ExperienceSession() {
           justifyContent: "center",
         }}
       >
-        <Button type="secondary" height={66} width={"35%"} minWidth={300}>
-          CONHEÇA NOSSO MÉTODO
-        </Button>
+        <Link
+          activeClass="active"
+          to="fale-conosco"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
+        >
+          <Button type="secondary" height={66} width={"35%"} minWidth={300}>
+            CONHEÇA NOSSO MÉTODO
+          </Button>
+        </Link>
       </div>
     </ExperienceContainer>
   );

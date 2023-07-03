@@ -76,11 +76,24 @@ const BurgerMenu = () => {
 
       <Sidebar isOpen={isOpen}>
         <CloseButton onClick={closeSidebar}>X</CloseButton>
-        <HeaderLink to="mainSession">Home</HeaderLink>
-        <HeaderLink to="quemSomos">Quem Somos</HeaderLink>
-        <HeaderLink to="solucoes">Soluções</HeaderLink>
-        <HeaderLink to="experienceSession">Metodologia</HeaderLink>
-        <HeaderLink to="blog">Blog</HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="home">
+          Home
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="quemSomos">
+          Quem Somos
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="solucoes">
+          Soluções
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="metodologia">
+          Metodologia
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="blog">
+          Blog
+        </HeaderLink>
+        <HeaderLink onClick={closeSidebar} to="fale-conosco">
+          Fale Conosco
+        </HeaderLink>
       </Sidebar>
     </div>
   );

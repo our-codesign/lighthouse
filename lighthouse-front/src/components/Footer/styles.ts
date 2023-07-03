@@ -78,6 +78,7 @@ export const FooterColumn = styled.div`
 export const FooterItem = styled.div`
   color: white;
   margin: 4px 0;
+  cursor: pointer;
   display: flex;
   align-items: center;
 

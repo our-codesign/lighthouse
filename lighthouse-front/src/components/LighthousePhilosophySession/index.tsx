@@ -48,7 +48,7 @@ export default function MyCarousel() {
       swipeable={false}
       dynamicHeight={true}
     >
-      <Wrapper containerIndex={0}>
+      <Wrapper containerIndex={0} id="metodologia">
         <CardContainer0>
           <DescriptionContainer0>
             Inspirado em um Farol, <LightHouseSpan>LIGHTHOUSE</LightHouseSpan>{" "}

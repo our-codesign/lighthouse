@@ -11,7 +11,7 @@ import {
 } from "./styles";
 
 const AdvancedTrading = () => (
-  <Wrapper>
+  <Wrapper id="blog">
     <CardImage />
 
     <CardText>

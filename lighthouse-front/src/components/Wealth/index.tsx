@@ -1,9 +1,10 @@
 import React from "react";
 import { Title, Text, Wrapper, CardText, CardImage, TitleSpan } from "./styles";
 import Button from "../Button/index";
+import { Link } from "react-scroll";
 
 const Wealth = () => (
-  <Wrapper>
+  <Wrapper id="quemSomos">
     <CardText>
       <Title>
         <TitleSpan>VOCÊ NO COMANDO</TitleSpan>
@@ -22,9 +23,18 @@ const Wealth = () => (
         mercado financeiro mundial mais importante, onde as grandes
         oportunidades estão presentes.
       </Text>
-      <Button type="secondary" height={66} width={"35%"} minWidth={200}>
-        CONHEÇA MAIS
-      </Button>
+      <Link
+        activeClass="active"
+        to="fale-conosco"
+        spy={true}
+        smooth={true}
+        offset={-70}
+        duration={500}
+      >
+        <Button type="secondary" height={66} width={"35%"} minWidth={200}>
+          CONHEÇA MAIS
+        </Button>
+      </Link>
     </CardText>
 
     <CardImage />

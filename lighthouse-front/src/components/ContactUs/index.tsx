@@ -43,7 +43,7 @@ const contactInfo = [
 ];
 
 const ContactUs = () => (
-  <ContactContainer>
+  <ContactContainer id="fale-conosco">
     <CardText>
       <MainSessionTitle>Fale Conosco</MainSessionTitle>
       <LeftDivider />
