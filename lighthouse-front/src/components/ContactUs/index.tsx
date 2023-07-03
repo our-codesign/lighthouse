@@ -15,7 +15,6 @@ import {
 import locationIcon from "../../assets/images/locationIcon.png";
 import phoneIcon from "../../assets/images/phoneIcon.png";
 import emailIcon from "../../assets/images/emailIcon.png";
-import Image from "next/image";
 import Button from "../Button";
 
 const messages = {
@@ -50,7 +49,7 @@ const ContactUs = () => (
       <CardItem>
         {contactInfo.map((info, index) => (
           <FooterItem key={index}>
-            <Image src={info.icon} alt={info.alt} />
+            <img src={info.icon} alt={info.alt} />
             {info.text}
           </FooterItem>
         ))}

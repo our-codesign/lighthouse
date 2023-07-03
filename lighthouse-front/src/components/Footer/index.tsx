@@ -11,7 +11,6 @@ import {
 import locationIcon from "../../assets/images/locationIcon.png";
 import phoneIcon from "../../assets/images/phoneIcon.png";
 import emailIcon from "../../assets/images/emailIcon.png";
-import Image from "next/image";
 import { messages } from "./messages";
 import LOGO from "../../assets/images/LOGO-LIGHTHOUSEBRANCO.png";
 import { Link } from "react-scroll";
@@ -50,7 +49,7 @@ const Footer = () => {
 
       <Container>
         <CardImage>
-          <Image src={LOGO} alt="logo branca" width={200} />
+          <img src={LOGO} alt="logo branca" width={200} />
         </CardImage>
 
         <FooterColumnWrapper>
@@ -58,7 +57,7 @@ const Footer = () => {
             <FooterItem>{messages.contactUs}</FooterItem>
             {contactInfo.map((info, index) => (
               <FooterItem key={index}>
-                <Image src={info.icon} alt={info.alt} width={24} height={24} />
+                <img src={info.icon} alt={info.alt} width={24} height={24} />
                 {info.text}
               </FooterItem>
             ))}
