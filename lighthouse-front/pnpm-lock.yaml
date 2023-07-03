@@ -44,12 +44,9 @@ dependencies:
   react-responsive-carousel:
     specifier: ^3.2.23
     version: 3.2.23
-<<<<<<< HEAD
-=======
   react-scroll:
     specifier: ^1.8.9
     version: 1.8.9(react-dom@18.2.0)(react@18.2.0)
->>>>>>> 3959743fcabfef061c3b574cb6091941e376fb06
   styled-components:
     specifier: ^6.0.1
     version: 6.0.1(react-dom@18.2.0)(react@18.2.0)
@@ -3907,8 +3904,6 @@ packages:
       react-easy-swipe: 0.0.21
     dev: false
 
-<<<<<<< HEAD
-=======
   /react-scroll@1.8.9(react-dom@18.2.0)(react@18.2.0):
     resolution: {integrity: sha512-9m7ztraiX/l6L7erzYAD3fhnveNckei6/NkWfqwN2e0FRdoE2W6Pk4oi2Nah7mWpPCPAeIgegfaqZACTimPOwg==}
     peerDependencies:
@@ -3921,7 +3916,6 @@ packages:
       react-dom: 18.2.0(react@18.2.0)
     dev: false
 
->>>>>>> 3959743fcabfef061c3b574cb6091941e376fb06
   /react@18.2.0:
     resolution: {integrity: sha512-/3IjMdb2L9QbBdWiW5e3P2/npwMBaU9mHCSCUzNln0ZCYbcfTsGbTJrU/kGemdH2IWmB2ioZ+zkxtmq6g09fGQ==}
     engines: {node: '>=0.10.0'}
