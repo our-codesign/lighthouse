@@ -35,7 +35,7 @@ export default function Header() {
         <HeaderLink to="fale-conosco">Fale Conosco</HeaderLink>
       </LinksContainer>
       {screenSize && screenSize.dynamicWidth >= 884 && (
-        <Button type="primary" height={51} width={183}>
+        <Button type="primary" height={51} width={"10%"}>
           Contato
         </Button>
       )}

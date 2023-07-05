@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const HeaderContainer = styled.header`
   background-color: #0b1c38;
-  height: 146px;
+  height: 100px;
   border-bottom: 8px solid #dbc68f;
   display: flex;
   align-items: center;
@@ -16,6 +16,9 @@ export const HeaderContainer = styled.header`
   @media (max-width: 884px) {
     padding: 30px;
   }
+  @media (max-width: 1004px) {
+    padding: 10px;
+  }
 `;
 
 export const LogoText = styled.h1`
@@ -27,6 +30,9 @@ export const LinksContainer = styled.div`
   display: flex;
   align-items: center;
   gap: 16px;
+  @media (max-width: 1004px) {
+    gap: 5px;
+  }
   @media (max-width: 884px) {
     display: none;
   }

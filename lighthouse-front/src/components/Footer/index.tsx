@@ -7,6 +7,8 @@ import {
   FooterColumnWrapper,
   Container,
   CardImage,
+  FooterLink,
+  FooterTitle,
 } from "./styles";
 import locationIcon from "../../assets/images/locationIcon.png";
 import phoneIcon from "../../assets/images/phoneIcon.png";
@@ -54,7 +56,7 @@ const Footer = () => {
 
         <FooterColumnWrapper>
           <FooterColumn>
-            <FooterItem>{messages.contactUs}</FooterItem>
+            <FooterTitle>FALE CONOSCO</FooterTitle>
             {contactInfo.map((info, index) => (
               <FooterItem key={index}>
                 <img src={info.icon} alt={info.alt} width={24} height={24} />
@@ -63,7 +65,7 @@ const Footer = () => {
             ))}
           </FooterColumn>
           <FooterColumn>
-            <FooterItem>{messages.menu}</FooterItem>
+            <FooterTitle>{messages.menu}</FooterTitle>
             {menuItems.map((item, index) => (
               <Link
                 activeClass="active"
@@ -74,9 +76,14 @@ const Footer = () => {
                 duration={500}
                 key={index}
               >
-                <FooterItem>{item.text}</FooterItem>
+                <FooterLink>{item.text}</FooterLink>
               </Link>
             ))}
+          </FooterColumn>
+          <FooterColumn style={{ paddingTop: 15 }}>
+            <FooterLink>Politica de Privacidade</FooterLink>
+            <FooterLink>Politica de Cookies</FooterLink>
+            <FooterLink>Configuração de Cookies</FooterLink>
           </FooterColumn>
         </FooterColumnWrapper>
         <div style={{ flex: 0.8 }}></div>

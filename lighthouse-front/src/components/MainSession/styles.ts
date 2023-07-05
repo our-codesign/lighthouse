@@ -4,18 +4,19 @@ export const MainSessionContainer = styled.div`
   width: 100%;
   min-height: 800px;
   background-image: url("/HOME.png");
-  top: 146px;
+  padding-top: 100px;
   background-size: cover;
-  background-position: center;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   flex-direction: column;
+  box-sizing: border-box;
 `;
 
 export const Filter = styled.div`
   position: absolute;
+  margin-top: -100px;
   width: 100%;
   height: 100%;
   z-index: 2;

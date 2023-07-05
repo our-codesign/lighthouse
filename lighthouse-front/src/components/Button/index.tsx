@@ -52,7 +52,7 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const font = {
-    primary: "normal normal bold 20px/27px Open Sans",
+    primary: "normal normal bold 16px/20px Open Sans",
     secondary: "normal normal bold 18px Marine",
     tertiary: "normal normal normal 20px/37px Times New Roman",
     round: "normal normal bold 20px/27px Open Sans", // added round property

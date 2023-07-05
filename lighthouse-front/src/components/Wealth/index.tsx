@@ -1,5 +1,5 @@
 import React from "react";
-import { Title, Text, Wrapper, CardText, CardImage, TitleSpan } from "./styles";
+import { Title, Text, Wrapper, CardText, CardImage, Filter } from "./styles";
 import Button from "../Button/index";
 import { Link } from "react-scroll";
 
@@ -7,9 +7,7 @@ const Wealth = () => (
   <Wrapper id="quemSomos">
     <CardText>
       <Title>
-        <TitleSpan>VOCÊ NO COMANDO</TitleSpan>
-
-        <TitleSpan>DE SUAS RIQUEZAS</TitleSpan>
+        VOCÊ NO COMANDO <br /> DE SUAS RIQUEZAS
       </Title>
       <Text>
         Como investidor profissional por mais de 30 anos, desenvolvi um serviço
@@ -36,7 +34,7 @@ const Wealth = () => (
         </Button>
       </Link>
     </CardText>
-
+    <Filter />
     <CardImage />
   </Wrapper>
 );

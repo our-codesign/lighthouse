@@ -1,53 +1,52 @@
 import styled from "styled-components";
 
 export const Wrapper = styled.div`
-  min-height: 700px;
   width: 100%;
-  background-color: #0b1b37;
+  min-height: 700px;
+  background-color: #0b1c38;
   display: flex;
-  align-items: center;
-  justify-content: space-evenly;
-  flex-direction: row;
-  padding-bottom: 80px;
-
-  @media (max-width: 1350px) {
+  position: relative;
+  box-shadow: inset 0px 0px 40px 40px #0b1c38;
+  @media (max-width: 884px) {
     flex-direction: column-reverse;
-    padding-bottom: 0px;
   }
 `;
-
+export const Filter = styled.div`
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  opacity: 0.4;
+  background-color: #0b1c38;
+`;
 export const CardImage = styled.div`
-  width: 60%;
   background-image: url("/BLOG.png");
+  width: calc(50% + 15%);
   background-size: cover;
-  height: 700px;
-
-  @media (max-width: 1350px) {
-    width: auto;
-    min-width: 400px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 400px;
-    height: auto;
-    background-size: contain;
-    background-repeat: no-repeat;
+  box-shadow: inset 0px 0px 40px 40px #0b1c38;
+  height: auto;
+  margin-right: -15%;
+  @media (max-width: 884px) {
+    width: 100%;
+    height: 400px;
+    margin-right: 0;
+    margin-left: -10%;
   }
 `;
 
 export const CardText = styled.div`
-  width: 45%;
-  height: auto;
+  width: 50%;
+  padding: 10% 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  margin-left: -320px;
-
-  @media (max-width: 1350px) {
-    width: 80%;
-    height: 50%;
-    margin-left: -0px;
+  z-index: 9999;
+  @media (max-width: 884px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+    width: 100%;
   }
 `;
 
@@ -84,12 +83,13 @@ export const MainSessionDescription = styled.p`
   font: normal normal 500 20px/31px Open Sans;
   letter-spacing: 0px;
   color: #fafafa;
+  white-space: nowrap;
   opacity: 1;
   z-index: 999;
   margin: 0;
   margin-bottom: 40px;
   margin-top: 10px;
-  font: normal normal normal 35px Times New Roman;
+  font: normal normal normal 30px Times New Roman;
 
   @media (max-width: 884px) {
     font: normal normal 500 20px Open Sans;

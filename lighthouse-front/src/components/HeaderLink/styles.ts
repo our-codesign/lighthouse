@@ -6,6 +6,7 @@ export const LinkButton = styled.button`
   background-color: transparent;
   font-weight: bold;
   font-size: 14px;
+  white-space: nowrap;
   cursor: pointer;
   white-space: nowrap;
   font: normal normal Open Sans;

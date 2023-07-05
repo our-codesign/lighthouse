@@ -17,8 +17,8 @@ export const Filter = styled.div`
   width: 100%;
   height: 100%;
   z-index: 2;
-  background: transparent linear-gradient(180deg, #0b1b379c 0%, #0b1b37 100%) 0%
-    0% no-repeat padding-box;
+  background: #0b1b37;
+  opacity: 0.8;
 `;
 
 export const ExperienceTitle = styled.h1`

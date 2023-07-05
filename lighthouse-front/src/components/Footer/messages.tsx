@@ -1,7 +1,7 @@
 ("");
 export const messages = {
   contactUs: "Fale Conosco",
-  menu: "Menu",
+  menu: "MENU",
   home: "Home",
   address: "123 MOCKUP ST, COTIA-SP",
   phone: "(+55) 11 975678899",

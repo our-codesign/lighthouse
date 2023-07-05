@@ -60,7 +60,9 @@ export const FooterColumn = styled.div`
     margin-bottom: 10px;
     text-transform: uppercase;
     font-weight: bold;
-    font: normal normal 900 16px/18px Marine;
+    font-family: marine, sans-serif;
+    font-style: normal;
+    font-weight: 300;
   }
 
   .hidden {
@@ -74,17 +76,45 @@ export const FooterColumn = styled.div`
     height: auto;
   }
 `;
-
+export const FooterTitle = styled.p`
+  font-family: marine, sans-serif;
+  font-style: bold;
+  font-weight: 600;
+  font-size: 15px;
+  margin: 0;
+  color: white;
+`;
 export const FooterItem = styled.div`
   color: white;
   margin: 4px 0;
-  cursor: pointer;
   display: flex;
+  white-space: nowrap;
   align-items: center;
 
   img {
     margin-right: 8px;
   }
+  width: auto;
+  font-size: 15px;
+  @media (max-width: 768px) {
+    justify-content: center;
+    img {
+      margin: 0 8px;
+    }
+  }
+`;
+
+export const FooterLink = styled.div`
+  color: white;
+  margin: 4px 0;
+  cursor: pointer;
+  display: flex;
+  white-space: nowrap;
+  align-items: center;
+  &:hover {
+    border-bottom: 2px solid #dbc68f;
+  }
+
   width: auto;
   font-size: 15px;
   @media (max-width: 768px) {

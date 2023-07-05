@@ -8,12 +8,13 @@ import {
   LeftDivider,
   MainSessionDescription,
   DescriptionSpan,
+  Filter,
 } from "./styles";
 
 const AdvancedTrading = () => (
   <Wrapper id="blog">
     <CardImage />
-
+    <Filter />
     <CardText>
       <MainSessionTitle>
         <DescriptionSpan>ADVANCED TRADING</DescriptionSpan>
@@ -21,8 +22,8 @@ const AdvancedTrading = () => (
       </MainSessionTitle>
       <LeftDivider />
       <MainSessionDescription>
-        <DescriptionSpan>UM MÉTODO PARA GERAR RENDA ADICIONAL</DescriptionSpan>
-        <DescriptionSpan>PARA INVESTIDORES MAIS SOFISTICADOS</DescriptionSpan>
+        UM MÉTODO PARA GERAR RENDA ADICIONAL <br />
+        PARA INVESTIDORES MAIS SOFISTICADOS
       </MainSessionDescription>
       <Button type="secondary" height={50} width={"35%"} minWidth={300}>
         ACESSSE NOSSO BLOG
