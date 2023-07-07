@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
 import {
+  Arrow1Wrapper,
+  Arrow2Wrapper,
   CardContainer0,
   CardContainer1,
   CardContainer1Description,
@@ -18,10 +20,16 @@ import {
   CardContainer3Title,
   CardContainer3TitleSub,
   DescriptionContainer0,
+  Filter1,
+  Filter2,
+  Filter3,
+  Filter4,
   LightHouseSpan,
   Wrapper,
 } from "./styles";
 import Button from "../Button";
+import RightArrowSVG from "../../assets/svgs/rightArrowSVG";
+import LeftArrowSVG from "../../assets/svgs/leftArrowSVG";
 
 export default function MyCarousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -49,6 +57,7 @@ export default function MyCarousel() {
       dynamicHeight={true}
     >
       <Wrapper containerIndex={0} id="metodologia">
+        <Filter1 />
         <CardContainer0>
           <DescriptionContainer0>
             Inspirado em um Farol, <LightHouseSpan>LIGHTHOUSE</LightHouseSpan>{" "}
@@ -69,6 +78,7 @@ export default function MyCarousel() {
         </CardContainer0>
       </Wrapper>
       <Wrapper containerIndex={1}>
+        <Filter2 />
         <CardContainer1>
           <CardContainer1Title>PROTEGENDO SEU PATRIMÔNIO</CardContainer1Title>
           <CardContainer1TitleSub>
@@ -83,18 +93,13 @@ export default function MyCarousel() {
             investimentos, protegendo seu patrimônio de fatores econômicos e
             políticos da economia brasileira e de tributações excessivas.
           </CardContainer1Description>
-          <Button
-            onClick={next}
-            type="secondary"
-            height={66}
-            width={"35%"}
-            minWidth={300}
-          >
-            Next
-          </Button>
+          <Arrow1Wrapper onClick={next}>
+            <RightArrowSVG />
+          </Arrow1Wrapper>
         </CardContainer1>
       </Wrapper>
       <Wrapper containerIndex={2}>
+        <Filter3 />
         <CardContainer2>
           <CardContainer2Title>ESCLARECENDO SUAS DECISÕES</CardContainer2Title>
           <CardContainer2TitleSub>
@@ -115,13 +120,14 @@ export default function MyCarousel() {
             Escolhas de ativos que historicamente tem performance superior nos
             cenários projetados
           </CardContainer2SubDescription>
-          <div>
-            <button onClick={prev}>prev</button>
-            <button onClick={next}>next</button>
-          </div>
+          <Arrow2Wrapper>
+            <LeftArrowSVG onClick={prev} />
+            <RightArrowSVG onClick={next} />
+          </Arrow2Wrapper>
         </CardContainer2>
       </Wrapper>
       <Wrapper containerIndex={3}>
+        <Filter4 />
         <CardContainer3>
           <CardContainer3Title>
             DIRECIONANDO SEUS INVESTIMENTOS

@@ -22,7 +22,7 @@ function App() {
       <MainSession />
       <Wealth />
       <ExperienceSession />
-      {/*   <LighthousePhilosophySession />*/}
+      <LighthousePhilosophySession />
       <AdvancedTrading />
       <ContactUs />
       <Footer />
