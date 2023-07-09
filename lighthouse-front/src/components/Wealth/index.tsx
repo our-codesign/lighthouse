@@ -23,7 +23,7 @@ const Wealth = () => (
       </Text>
       <Link
         activeClass="active"
-        to="fale-conosco"
+        to="solucoes"
         spy={true}
         smooth={true}
         offset={-70}

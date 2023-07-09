@@ -30,6 +30,7 @@ import {
 import Button from "../Button";
 import RightArrowSVG from "../../assets/svgs/rightArrowSVG";
 import LeftArrowSVG from "../../assets/svgs/leftArrowSVG";
+import { Link } from "react-scroll";
 
 export default function MyCarousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -153,15 +154,24 @@ export default function MyCarousel() {
               O terceiro seleciona a melhor estratégia de compra e venda de
               ativos associadas aos ciclos de volatilidade e suas fases
             </CardContainer3SubDescription>
-            <Button
-              onClick={next}
-              type="secondary"
-              height={66}
-              width={"35%"}
-              minWidth={300}
+            <Link
+              activeClass="active"
+              to="fale-conosco"
+              spy={true}
+              smooth={true}
+              offset={-70}
+              duration={500}
             >
-              AGENDAR CONSULTORIA
-            </Button>
+              <Button
+                onClick={next}
+                type="secondary"
+                height={66}
+                width={"35%"}
+                minWidth={300}
+              >
+                AGENDAR CONSULTORIA
+              </Button>
+            </Link>
           </div>
         </CardContainer3>
       </Wrapper>

@@ -60,17 +60,23 @@ export const DividerContainer = styled.div`
 export const LeftDivider = styled.div`
   background: #dbc68f 0% 0% no-repeat padding-box;
   width: 30%;
-  height: 7px;
+  height: 0px;
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;
+  border: 3.5px solid #dbc68f;
+  border-top-right-radius: 100%;
+  border-bottom-right-radius: 100%;
 `;
 
 export const RightDivider = styled.div`
   background: #dbc68f 0% 0% no-repeat padding-box;
   width: 30%;
-  height: 7px;
+  height: 0px;
+  border: 3.5px solid #dbc68f;
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;
+  border-top-left-radius: 100%;
+  border-bottom-left-radius: 100%;
 `;
 
 export const GetToKnow = styled.h3`
@@ -87,9 +93,19 @@ export const GetToKnow = styled.h3`
 `;
 export const Divider = styled.div`
   background: #dbc68f 0% 0% no-repeat padding-box;
-  width: 200px;
-  height: 4px;
+  width: 300px;
+  height: 3.5px;
   margin-top: 8px;
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;
+  border-radius: 90%;
+`;
+
+export const TriangleDown = styled.div`
+  width: 0;
+  height: 0;
+  z-index: 9999;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 10px solid #dbc68f;
 `;

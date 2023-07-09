@@ -70,7 +70,9 @@ export const MainSessionTitle = styled.h1`
 export const LeftDivider = styled.div`
   background: #dbc68f 0% 0% no-repeat padding-box;
   width: 85%;
-  height: 7px;
+  height: 3.5px;
+  border-radius: 90%;
+
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;
   margin-top: 10px;

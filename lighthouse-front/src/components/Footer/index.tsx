@@ -81,9 +81,18 @@ const Footer = () => {
             ))}
           </FooterColumn>
           <FooterColumn style={{ paddingTop: 15 }}>
-            <FooterLink>Politica de Privacidade</FooterLink>
-            <FooterLink>Politica de Cookies</FooterLink>
-            <FooterLink>Configuração de Cookies</FooterLink>
+            <FooterLink
+              href="https://www.iubenda.com/privacy-policy/58498631"
+              target="_blank"
+            >
+              Politica de Privacidade
+            </FooterLink>
+            <FooterLink
+              href="https://www.iubenda.com/privacy-policy/58498631/cookie-policy"
+              target="_blank"
+            >
+              Politica de Cookies
+            </FooterLink>
           </FooterColumn>
         </FooterColumnWrapper>
         <div style={{ flex: 0.8 }}></div>

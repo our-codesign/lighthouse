@@ -19,6 +19,7 @@ const LeftArrowSVG: React.FC<LeftArrowSVGProps> = ({
       width={width}
       height={height}
       viewBox="0 0 180 75"
+      style={{ cursor: "pointer" }}
     >
       <defs>
         <linearGradient
@@ -27,9 +28,9 @@ const LeftArrowSVG: React.FC<LeftArrowSVGProps> = ({
           x2="0"
           gradientUnits="objectBoundingBox"
         >
-          <stop offset="0" stop-color="#efc88b" />
-          <stop offset="0.824" stop-color="#1f2b3f" stop-opacity="0.161" />
-          <stop offset="1" stop-color="#0b1c38" stop-opacity="0.078" />
+          <stop offset="0" stopColor="#efc88b" />
+          <stop offset="0.824" stopColor="#1f2b3f" stop-opacity="0.161" />
+          <stop offset="1" stopColor="#0b1c38" stop-opacity="0.078" />
         </linearGradient>
       </defs>
       <path

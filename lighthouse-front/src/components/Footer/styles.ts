@@ -104,8 +104,9 @@ export const FooterItem = styled.div`
   }
 `;
 
-export const FooterLink = styled.div`
+export const FooterLink = styled.a`
   color: white;
+  text-decoration: none; /* no underline */
   margin: 4px 0;
   cursor: pointer;
   display: flex;

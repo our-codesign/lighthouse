@@ -8,6 +8,7 @@ import {
   RightDivider,
   GetToKnow,
   Divider,
+  TriangleDown,
 } from "./styles";
 import Button from "../Button";
 import { useState, useEffect } from "react";
@@ -51,6 +52,7 @@ export default function MainSession() {
       <MainSessionTitle>SIMPLIFICANDO INVESTIMENTOS</MainSessionTitle>
       <DividerContainer>
         <LeftDivider />
+
         <MainSessionTitle>&</MainSessionTitle>
         <RightDivider />
       </DividerContainer>
@@ -69,11 +71,12 @@ export default function MainSession() {
       </div>
       <GetToKnow>CONHEÇA LIGHTHOUSE</GetToKnow>
       <Divider />
+      <TriangleDown />
       <Dialog isVisible={isOpen} onDismiss={handleDialog}>
         <iframe
           width="100%"
           height="100%"
-          src="https://www.youtube.com/embed/tgbNymZ7vqY"
+          src="https://www.youtube.com/embed/X2VmTVagwWg"
           title="youtube"
         ></iframe>
       </Dialog>

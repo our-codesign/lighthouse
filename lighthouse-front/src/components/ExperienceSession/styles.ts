@@ -74,7 +74,9 @@ export const ExperienceDescription = styled.p`
 export const Divider = styled.div`
   background: #dbc68f;
   width: 40%;
-  height: 3px;
+  height: 3.5px;
+  border-radius: 90%;
+
   margin-top: 8px;
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;
@@ -131,4 +133,7 @@ export const GlowingCard = styled.div`
 
 export const ExperienceDescriptionCard = styled.div`
   border-bottom: 2px solid #dbc68f;
+  padding-bottom: 2px;
+  border-bottom-left-radius: 90% 2%;
+  border-bottom-right-radius: 90% 2%;
 `;

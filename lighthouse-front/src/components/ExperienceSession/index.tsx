@@ -107,7 +107,7 @@ export default function ExperienceSession() {
       >
         <Link
           activeClass="active"
-          to="fale-conosco"
+          to="metodologia"
           spy={true}
           smooth={true}
           offset={-70}
