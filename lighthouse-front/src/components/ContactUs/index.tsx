@@ -12,9 +12,9 @@ import {
   FormContainer,
   CardItem,
 } from "./styles";
-import locationIcon from "../../assets/images/locationIcon.png";
-import phoneIcon from "../../assets/images/phoneIcon.png";
-import emailIcon from "../../assets/images/emailIcon.png";
+import locationIcon from "../../assets/images/locationIcon.webp";
+import phoneIcon from "../../assets/images/phoneIcon.webp";
+import emailIcon from "../../assets/images/emailIcon.webp";
 import Button from "../Button";
 
 const messages = {

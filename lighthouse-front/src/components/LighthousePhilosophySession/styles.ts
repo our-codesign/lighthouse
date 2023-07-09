@@ -8,7 +8,7 @@ export const Wrapper = styled.div<WrapperProps>`
   min-height: 700px;
   height: fit-content;
   background-image: ${({ containerIndex }) =>
-    `url("/FILOSOFIA${containerIndex || 0}.png")`};
+    `url("/FILOSOFIA${containerIndex || 0}.webp")`};
   background-size: cover;
   box-shadow: inset 0px 0px 40px 40px #0b1c38;
   width: 100vw;

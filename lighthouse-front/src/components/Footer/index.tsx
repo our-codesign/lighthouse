@@ -10,11 +10,11 @@ import {
   FooterLink,
   FooterTitle,
 } from "./styles";
-import locationIcon from "../../assets/images/locationIcon.png";
-import phoneIcon from "../../assets/images/phoneIcon.png";
-import emailIcon from "../../assets/images/emailIcon.png";
+import locationIcon from "../../assets/images/locationIcon.webp";
+import phoneIcon from "../../assets/images/phoneIcon.webp";
+import emailIcon from "../../assets/images/emailIcon.webp";
 import { messages } from "./messages";
-import LOGO from "../../assets/images/LOGO-LIGHTHOUSEBRANCO.png";
+import LOGO from "../../assets/images/LOGO-LIGHTHOUSEBRANCO.webp";
 import { Link } from "react-scroll";
 
 const Footer = () => {

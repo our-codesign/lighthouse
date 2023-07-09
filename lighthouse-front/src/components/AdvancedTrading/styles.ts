@@ -20,7 +20,7 @@ export const Filter = styled.div`
   background-color: #0b1c38;
 `;
 export const CardImage = styled.div`
-  background-image: url("/BLOG.png");
+  background-image: url("/BLOG.webp");
   width: calc(50% + 15%);
   background-size: cover;
   box-shadow: inset 0px 0px 40px 40px #0b1c38;

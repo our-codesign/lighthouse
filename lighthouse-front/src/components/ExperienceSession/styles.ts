@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const ExperienceContainer = styled.div`
   width: 100%;
   min-height: 800px;
-  background-image: url("/METODO.png");
+  background-image: url("/METODO.webp");
   background-size: cover;
   background-position: center;
   display: flex;

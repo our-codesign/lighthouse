@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const MainSessionContainer = styled.div`
   width: 100%;
   min-height: 800px;
-  background-image: url("/HOME.png");
+  background-image: url("/HOME.webp");
   padding-top: 100px;
   background-size: cover;
   display: flex;
