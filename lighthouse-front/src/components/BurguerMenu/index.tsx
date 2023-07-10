@@ -88,7 +88,7 @@ const BurgerMenu = () => {
         <HeaderLink onClick={closeSidebar} to="metodologia">
           Metodologia
         </HeaderLink>
-        <HeaderLink onClick={closeSidebar} to="blog">
+        <HeaderLink onClick={closeSidebar} to="blog" isBlog>
           Blog
         </HeaderLink>
         <HeaderLink onClick={closeSidebar} to="fale-conosco">

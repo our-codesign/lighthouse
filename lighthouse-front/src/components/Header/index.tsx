@@ -31,7 +31,9 @@ export default function Header() {
         <HeaderLink to="quemSomos">Quem Somos</HeaderLink>
         <HeaderLink to="solucoes">Soluções</HeaderLink>
         <HeaderLink to="metodologia">Metodologia</HeaderLink>
-        <HeaderLink to="blog">Blog</HeaderLink>
+        <HeaderLink to="blog" isBlog={true}>
+          Blog
+        </HeaderLink>
         <HeaderLink to="fale-conosco">Fale Conosco</HeaderLink>
       </LinksContainer>
       {screenSize && screenSize.dynamicWidth >= 884 && (

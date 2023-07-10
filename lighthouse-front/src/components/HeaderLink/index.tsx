@@ -5,6 +5,7 @@ type HeaderLinkProps = {
   children: React.ReactNode;
   isActive?: boolean;
   to: string;
+  isBlog?: boolean;
   onClick?: () => void;
 };
 
@@ -12,14 +13,31 @@ const HeaderLink: React.FC<HeaderLinkProps> = ({
   children,
   isActive = false,
   to,
+  isBlog,
   onClick,
 }) => {
   const borderBottom = isActive ? "2px solid #dbc68f" : "";
+  const o = () => {
+    console.log(isBlog);
 
+    if (onClick) onClick();
+  };
+  if (isBlog) {
+    return (
+      <a
+        style={{ textDecoration: "none" }}
+        target="_blank"
+        href="https://lighthouseinvestimentos.wordpress.com/"
+        rel="noreferrer"
+      >
+        <LinkButton style={{ borderBottom }}>{children}</LinkButton>
+      </a>
+    );
+  }
   return (
     <Link
       activeClass="active"
-      onClick={onClick}
+      onClick={o}
       to={to}
       spy={true}
       smooth={true}

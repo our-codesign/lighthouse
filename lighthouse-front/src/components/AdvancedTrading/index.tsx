@@ -25,9 +25,16 @@ const AdvancedTrading = () => (
         UM MÉTODO PARA GERAR RENDA ADICIONAL <br />
         PARA INVESTIDORES MAIS SOFISTICADOS
       </MainSessionDescription>
-      <Button type="secondary" height={50} width={"35%"} minWidth={300}>
-        ACESSSE NOSSO BLOG
-      </Button>
+      <a
+        style={{ textDecoration: "none" }}
+        target="_blank"
+        href="https://lighthouseinvestimentos.wordpress.com/"
+        rel="noreferrer"
+      >
+        <Button type="secondary" height={50} width={"35%"} minWidth={300}>
+          ACESSSE NOSSO BLOG
+        </Button>
+      </a>
     </CardText>
   </Wrapper>
 );
