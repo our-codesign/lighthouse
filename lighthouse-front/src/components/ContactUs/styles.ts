@@ -145,6 +145,7 @@ export const Input = styled.input`
   border: none;
 
   @media (max-width: 1000px) {
+    min-width: 100%;
     width: 100%;
   }
 `;
@@ -165,4 +166,5 @@ export const ErrorText = styled.p`
 
 export const InputContainer = styled.div`
   margin-bottom: 10px;
+  width: 100%;
 `;
