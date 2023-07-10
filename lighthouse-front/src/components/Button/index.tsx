@@ -8,8 +8,9 @@ interface ButtonProps {
   children: React.ReactNode;
   height?: number | string;
   width?: number | string;
-  onClick?: () => void;
+  onClick?: (e?: any) => void;
   minWidth?: number | string;
+  disabled?: boolean;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -18,6 +19,7 @@ const Button: React.FC<ButtonProps> = ({
   height,
   width,
   minWidth,
+  disabled,
   onClick,
 }) => {
   const colors = {
@@ -32,14 +34,16 @@ const Button: React.FC<ButtonProps> = ({
   };
   const buttonBackgroundColor = {
     primary: colors.secondary,
-    secondary: `linear-gradient(to right, ${colors.secondary}, ${colors.primary})`,
+    secondary: disabled
+      ? "gray"
+      : `linear-gradient(to right, ${colors.secondary}, ${colors.primary})`,
     tertiary: "transparent",
     round: colors.secondary,
   };
 
   const border = {
     primary: "none",
-    secondary: `2px solid ${colors.secondary}`,
+    secondary: disabled ? "gray" : `2px solid ${colors.secondary}`,
     tertiary: `2px solid ${colors.secondary}`,
     round: "none",
   };
@@ -67,7 +71,8 @@ const Button: React.FC<ButtonProps> = ({
 
   return (
     <ButtonContainer
-      onClick={onClick}
+      onClick={(e: any) => onClick && onClick(e)}
+      disabled={disabled}
       style={{
         color: buttonColor[type],
         background: buttonBackgroundColor[type],

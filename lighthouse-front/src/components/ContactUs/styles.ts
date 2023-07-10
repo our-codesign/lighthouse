@@ -127,7 +127,7 @@ export const ContactForm = styled.form`
 export const InputRow = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 25px;
+  gap: 15px;
 
   @media (max-width: 1000px) {
     gap: 15px;
@@ -135,13 +135,13 @@ export const InputRow = styled.div`
 `;
 
 export const Input = styled.input`
-  width: 325px;
+  width: 100%;
+  min-width: 250px;
   height: 48px;
   background: #ffffff;
   border-radius: 4px;
   padding: 10px;
   box-sizing: border-box;
-  margin-bottom: 10px;
   border: none;
 
   @media (max-width: 1000px) {
@@ -154,5 +154,15 @@ export const TextArea = styled.textarea`
   background: #ffffff;
   border-radius: 5px;
   padding: 10px;
+  margin-bottom: 10px;
+`;
+
+export const ErrorText = styled.p`
+  color: red;
+  font-size: 13px;
+  margin: 0;
+`;
+
+export const InputContainer = styled.div`
   margin-bottom: 10px;
 `;
