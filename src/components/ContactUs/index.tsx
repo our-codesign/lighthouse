@@ -24,8 +24,8 @@ import Loading from "react-loading-components";
 
 const messages = {
   address: "123 MOCKUP ST, COTIA-SP",
-  phone: "(+55) 11 975678899",
-  email: "lighthouse@lighthouse.com",
+  phone: "(+55) 11 99990-7799",
+  email: "contato@lighthouseinvestimentos.com",
 };
 
 const contactInfo = [

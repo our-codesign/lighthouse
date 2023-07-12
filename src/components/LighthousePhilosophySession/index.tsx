@@ -4,6 +4,7 @@ import { Carousel } from "react-responsive-carousel";
 import {
   Arrow1Wrapper,
   Arrow2Wrapper,
+  ButtonWrapper,
   CardContainer0,
   CardContainer1,
   CardContainer1Description,
@@ -17,9 +18,11 @@ import {
   CardContainer2TitleSub,
   CardContainer3,
   CardContainer3SubDescription,
+  CardContainer3SubDescriptionWrapper,
   CardContainer3Title,
   CardContainer3TitleSub,
   DescriptionContainer0,
+  Divider,
   Filter1,
   Filter2,
   Filter3,
@@ -31,6 +34,7 @@ import Button from "../Button";
 import RightArrowSVG from "../../assets/svgs/rightArrowSVG";
 import LeftArrowSVG from "../../assets/svgs/leftArrowSVG";
 import { Link } from "react-scroll";
+import WhatsappIconSVG from "../../assets/svgs/whatsappIconSVG";
 
 export default function MyCarousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -88,14 +92,16 @@ export default function MyCarousel() {
           <CardContainer1TitleLighthouse>
             LIGHTHOUSE
           </CardContainer1TitleLighthouse>
+          <Divider />
           <CardContainer1Description>
             A harmoniosa análise das regras tributárias e a combinação de
             jurisdição dos ativos formarão o alicerce do seu portfólio de
             investimentos, protegendo seu patrimônio de fatores econômicos e
             políticos da economia brasileira e de tributações excessivas.
           </CardContainer1Description>
-          <Arrow1Wrapper onClick={next}>
-            <RightArrowSVG />
+          <Arrow1Wrapper>
+            <LeftArrowSVG onClick={prev} />
+            <RightArrowSVG onClick={next} />
           </Arrow1Wrapper>
         </CardContainer1>
       </Wrapper>
@@ -141,7 +147,7 @@ export default function MyCarousel() {
             A Sinergia de 3 algoritmos entregará ao investidor as informações
             fundamentais para o sucesso do investimento:
           </CardContainer3SubDescription>
-          <div>
+          <CardContainer3SubDescriptionWrapper>
             <CardContainer3SubDescription>
               O primeiro identifica alterações estruturais de mercado
               sinalizando as transições da tendencia dos preços
@@ -169,10 +175,13 @@ export default function MyCarousel() {
                 width={"35%"}
                 minWidth={300}
               >
-                AGENDAR CONSULTORIA
+                <ButtonWrapper>
+                  AGENDAR CONSULTORIA
+                  <WhatsappIconSVG />
+                </ButtonWrapper>
               </Button>
             </Link>
-          </div>
+          </CardContainer3SubDescriptionWrapper>
         </CardContainer3>
       </Wrapper>
     </Carousel>

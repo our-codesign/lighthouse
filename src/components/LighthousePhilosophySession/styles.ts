@@ -137,6 +137,7 @@ export const DescriptionContainer0 = styled.p`
   z-index: 999;
   @media (max-width: 1350px) {
     text-align: center;
+    font: normal normal normal 20px Times New Roman;
   }
 `;
 
@@ -164,7 +165,7 @@ export const CardContainer1 = styled.div`
 export const Arrow1Wrapper = styled.div`
   width: 100%;
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
 `;
 
 export const CardContainer1Title = styled.h1`
@@ -176,6 +177,7 @@ export const CardContainer1Title = styled.h1`
   margin: 0;
   @media (max-width: 1350px) {
     text-align: center;
+    font: normal normal normal 32px Aboreto;
   }
 `;
 
@@ -184,6 +186,9 @@ export const CardContainer1TitleSub = styled.p`
   letter-spacing: 0px;
   color: #ffffff;
   margin-bottom: 0px;
+  @media (max-width: 1350px) {
+    font: normal normal normal 22px Aboreto;
+  }
 `;
 
 export const CardContainer1TitleLighthouse = styled.p`
@@ -191,14 +196,23 @@ export const CardContainer1TitleLighthouse = styled.p`
   font: normal normal normal 88px/102px Aboreto;
   letter-spacing: 0px;
   color: #ffffff;
-  border-bottom: 2px solid #dbc68f;
   margin-top: 0;
-  margin-bottom: 26px;
+  margin-bottom: 0;
   @media (max-width: 1350px) {
     text-align: center;
+    font: normal normal normal 52px Aboreto;
   }
 `;
 
+export const Divider = styled.div`
+  background: #dbc68f;
+  width: 85%;
+  height: 3.5px;
+  border-radius: 90%;
+  transform: matrix(-1, 0, 0, -1, 0, 0);
+  z-index: 999;
+  margin-bottom: 26px;
+`;
 export const CardContainer1Description = styled.p`
   text-align: left;
   font: normal normal normal 22px Times New Roman;
@@ -240,6 +254,7 @@ export const CardContainer2Title = styled.h1`
   margin: 0;
   @media (max-width: 1350px) {
     text-align: center;
+    font: normal normal normal 32px Aboreto;
   }
 `;
 
@@ -250,6 +265,9 @@ export const CardContainer2TitleSub = styled.p`
   color: #ffffff;
   opacity: 1;
   margin-bottom: 50px;
+  @media (max-width: 1350px) {
+    font: normal normal normal 22px Times New Roman;
+  }
 `;
 
 export const CardContainer2SubTitle = styled.h2`
@@ -261,6 +279,7 @@ export const CardContainer2SubTitle = styled.h2`
   margin-bottom: 0;
   @media (max-width: 1350px) {
     text-align: center;
+    font: normal normal bold 20px Marine;
   }
 `;
 
@@ -273,6 +292,7 @@ export const CardContainer2SubDescription = styled.p`
   opacity: 1;
   @media (max-width: 1350px) {
     text-align: center;
+    font: normal normal normal 18px Times New Roman;
   }
 `;
 
@@ -336,4 +356,19 @@ export const CardContainer3SubDescription = styled.p`
   @media (max-width: 1350px) {
     text-align: center;
   }
+`;
+
+export const CardContainer3SubDescriptionWrapper = styled.div`
+  @media (min-width: 1350px) {
+    margin: 0 32px;
+    button {
+      margin: 0 -32px;
+    }
+  }
+`;
+
+export const ButtonWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
 `;
