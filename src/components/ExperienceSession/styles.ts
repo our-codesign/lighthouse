@@ -5,7 +5,8 @@ export const ExperienceContainer = styled.div`
   min-height: 800px;
   background-image: url("/METODO.webp");
   background-size: cover;
-  background-position: center;
+  background-size: 110vw 100%;
+  background-repeat: no-repeat;
   display: flex;
   align-items: center;
   justify-content: start;
@@ -48,7 +49,7 @@ export const CardTitle = styled.h1`
 
 export const CardDescription = styled.p`
   text-align: center;
-  font: normal normal 300 20px/21px Times New Roman;
+  font: normal normal 300 23px/21px Times New Roman;
   letter-spacing: 0px;
   @media (max-width: 884px) {
     display: none;
@@ -132,8 +133,17 @@ export const GlowingCard = styled.div`
 `;
 
 export const ExperienceDescriptionCard = styled.div`
-  border-bottom: 2px solid #dbc68f;
-  padding-bottom: 2px;
-  border-bottom-left-radius: 90% 2%;
-  border-bottom-right-radius: 90% 2%;
+  /* border: 2px solid #dbc68f;
+  padding: 2px 6px;
+  border-bottom-left-radius: 90% 3%;
+  border-bottom-right-radius: 90% 3%; */
+`;
+
+export const TextDivider = styled.div`
+  background: #dbc68f;
+  width: 100%;
+  height: 3px;
+  border-radius: 90%;
+  z-index: 999;
+  margin-top: 1px;
 `;

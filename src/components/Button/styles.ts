@@ -7,6 +7,7 @@ export const ButtonContainer = styled.button`
   font-size: 1.2rem;
   font-weight: bold;
   white-space: nowrap;
+  font-family: marine, sans-serif;
   ${(props) =>
     props.disabled &&
     css`

@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const MainSessionContainer = styled.div`
   width: 100%;
-  min-height: 800px;
+  min-height: 100vh;
   background-image: url("/HOME.webp");
   padding-top: 100px;
   background-size: cover;
@@ -27,7 +27,7 @@ export const Filter = styled.div`
 export const MainSessionTitle = styled.h1`
   text-align: center;
   font: normal normal normal 50px/62px Aboreto;
-  letter-spacing: 1px;
+  letter-spacing: 3px;
   color: #dbc68f;
   @media (max-width: 884px) {
     font: normal normal normal 30px/32px Aboreto;
@@ -59,20 +59,26 @@ export const DividerContainer = styled.div`
 
 export const LeftDivider = styled.div`
   background: #dbc68f 0% 0% no-repeat padding-box;
-  width: 30%;
+  width: 20%;
+  @media (max-width: 1024px) {
+    width: 30%;
+  }
   height: 0px;
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;
-  border: 3.5px solid #dbc68f;
+  border: 2px solid #dbc68f;
   border-top-right-radius: 100%;
   border-bottom-right-radius: 100%;
 `;
 
 export const RightDivider = styled.div`
   background: #dbc68f 0% 0% no-repeat padding-box;
-  width: 30%;
+  width: 20%;
+  @media (max-width: 1024px) {
+    width: 30%;
+  }
   height: 0px;
-  border: 3.5px solid #dbc68f;
+  border: 2px solid #dbc68f;
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;
   border-top-left-radius: 100%;
@@ -97,7 +103,7 @@ export const Divider = styled.div`
   height: 3.5px;
   margin-top: 8px;
   transform: matrix(-1, 0, 0, -1, 0, 0);
-  z-index: 999;
+  z-index: 99999;
   border-radius: 90%;
 `;
 
@@ -108,4 +114,16 @@ export const TriangleDown = styled.div`
   border-left: 5px solid transparent;
   border-right: 5px solid transparent;
   border-top: 10px solid #dbc68f;
+  z-index: 999;
+  position: relative;
+  bottom: 2px;
+`;
+
+export const GetToKownContainer = styled.div`
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  bottom: 5%;
 `;

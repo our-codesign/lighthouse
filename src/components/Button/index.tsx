@@ -1,4 +1,4 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { ButtonContainer } from "./styles";
 
 export type ButtonType = "primary" | "secondary" | "tertiary" | "round";
@@ -11,6 +11,7 @@ interface ButtonProps {
   onClick?: (e?: any) => void;
   minWidth?: number | string;
   disabled?: boolean;
+  style?: CSSProperties;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,6 +22,7 @@ const Button: React.FC<ButtonProps> = ({
   minWidth,
   disabled,
   onClick,
+  style,
 }) => {
   const colors = {
     primary: "#0b1c38",
@@ -57,7 +59,7 @@ const Button: React.FC<ButtonProps> = ({
 
   const font = {
     primary: "normal normal bold 16px/20px Open Sans",
-    secondary: "normal normal bold 18px Marine",
+    secondary: "",
     tertiary: "normal normal normal 20px/37px Times New Roman",
     round: "normal normal bold 20px/27px Open Sans", // added round property
   };
@@ -83,6 +85,7 @@ const Button: React.FC<ButtonProps> = ({
         height,
         width,
         minWidth: minWidth,
+        ...style,
       }}
     >
       {children}

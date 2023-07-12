@@ -9,6 +9,7 @@ import {
   ExperienceDescriptionCard,
   CardTitle,
   CardDescription,
+  TextDivider,
 } from "./styles";
 import Button from "../Button/index";
 import { Link } from "react-scroll";
@@ -30,6 +31,7 @@ export default function ExperienceSession() {
           <CardTitle>CONSULTORIA OPERACIONAL</CardTitle>
           <ExperienceDescriptionCard>
             <CardDescription>Corretora</CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
           <ExperienceDescriptionCard>
             <CardDescription>
@@ -37,6 +39,7 @@ export default function ExperienceSession() {
               gestão de
               <br /> investimentos
             </CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
         </GlowingCard>
 
@@ -49,6 +52,7 @@ export default function ExperienceSession() {
               <br />
               jurisdição internacional
             </CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
         </GlowingCard>
 
@@ -60,12 +64,14 @@ export default function ExperienceSession() {
               <br /> a tributação de investimento
               <br /> de brasileiros
             </CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
           <ExperienceDescriptionCard>
             <CardDescription>
               Pagando menos
               <br /> impostos
             </CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
         </GlowingCard>
         <GlowingCard>
@@ -76,6 +82,7 @@ export default function ExperienceSession() {
               portfólio de ativos
               <br /> diversificados
             </CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
           <ExperienceDescriptionCard>
             <CardDescription>
@@ -83,6 +90,7 @@ export default function ExperienceSession() {
               <br />
               portfólios financeiros
             </CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
         </GlowingCard>
         <GlowingCard>
@@ -93,6 +101,7 @@ export default function ExperienceSession() {
               opções de forma segura <br />e inovadora para <br /> geração de
               renda
             </CardDescription>
+            <TextDivider />
           </ExperienceDescriptionCard>
         </GlowingCard>
       </GlowingCardsContainer>
