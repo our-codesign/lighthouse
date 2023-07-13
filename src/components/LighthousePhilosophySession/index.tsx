@@ -34,12 +34,14 @@ import Button from "../Button";
 import RightArrowSVG from "../../assets/svgs/rightArrowSVG";
 import LeftArrowSVG from "../../assets/svgs/leftArrowSVG";
 import { Link } from "react-scroll";
-import WhatsappIconSVG from "../../assets/svgs/whatsappIconSVG";
+import useScreenSize from "../../hooks/use-screen-size";
 
 export default function MyCarousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const { screenSize } = useScreenSize();
 
   const next = () => {
+    console.log(selectedIndex, "INDEX");
     if (selectedIndex === 3) {
       setSelectedIndex(0);
     } else setSelectedIndex(selectedIndex + 1);
@@ -50,7 +52,16 @@ export default function MyCarousel() {
       setSelectedIndex(selectedIndex - 1);
     }
   };
-
+  const cta1 =
+    screenSize && screenSize?.dynamicWidth >= 884
+      ? "CONHEÇA NOSSA FILOSOFIA"
+      : "NOSSA FILOSOFIA";
+  const cta2 =
+    screenSize && screenSize?.dynamicWidth >= 884
+      ? "AGENDAR CONSULTORIA"
+      : "CONSULTORIA";
+  const arrowHeight =
+    screenSize && screenSize?.dynamicWidth >= 884 ? "180" : "50";
   return (
     <Carousel
       showArrows={false}
@@ -60,6 +71,7 @@ export default function MyCarousel() {
       showIndicators={false}
       swipeable={false}
       dynamicHeight={true}
+      animationHandler={"fade"}
     >
       <Wrapper containerIndex={0} id="metodologia">
         <Filter1 />
@@ -76,9 +88,10 @@ export default function MyCarousel() {
             type="secondary"
             height={66}
             width={"35%"}
-            minWidth={300}
+            minWidth={200}
+            mobileHeigh={50}
           >
-            CONHEÇA NOSSA FILOSOFIA
+            {cta1}
           </Button>
         </CardContainer0>
       </Wrapper>
@@ -100,8 +113,8 @@ export default function MyCarousel() {
             políticos da economia brasileira e de tributações excessivas.
           </CardContainer1Description>
           <Arrow1Wrapper>
-            <LeftArrowSVG onClick={prev} />
-            <RightArrowSVG onClick={next} />
+            <LeftArrowSVG onClick={prev} height={arrowHeight} />
+            <RightArrowSVG onClick={next} height={arrowHeight} />
           </Arrow1Wrapper>
         </CardContainer1>
       </Wrapper>
@@ -128,8 +141,8 @@ export default function MyCarousel() {
             cenários projetados
           </CardContainer2SubDescription>
           <Arrow2Wrapper>
-            <LeftArrowSVG onClick={prev} />
-            <RightArrowSVG onClick={next} />
+            <LeftArrowSVG onClick={prev} height={arrowHeight} />
+            <RightArrowSVG onClick={next} height={arrowHeight} />
           </Arrow2Wrapper>
         </CardContainer2>
       </Wrapper>
@@ -160,27 +173,24 @@ export default function MyCarousel() {
               O terceiro seleciona a melhor estratégia de compra e venda de
               ativos associadas aos ciclos de volatilidade e suas fases
             </CardContainer3SubDescription>
-            <Link
-              activeClass="active"
-              to="fale-conosco"
-              spy={true}
-              smooth={true}
-              offset={-70}
-              duration={500}
-            >
-              <Button
-                onClick={next}
-                type="secondary"
-                height={66}
-                width={"35%"}
-                minWidth={300}
+            <div style={{ paddingTop: 30 }}>
+              <a
+                target="_blank"
+                href="https://api.whatsapp.com/send?phone=5511999907799"
+                rel="noreferrer"
               >
-                <ButtonWrapper>
-                  AGENDAR CONSULTORIA
-                  <WhatsappIconSVG />
-                </ButtonWrapper>
-              </Button>
-            </Link>
+                <Button
+                  onClick={next}
+                  type="secondary"
+                  height={66}
+                  width={"35%"}
+                  minWidth={200}
+                  mobileHeigh={50}
+                >
+                  <ButtonWrapper>{cta2}</ButtonWrapper>
+                </Button>
+              </a>
+            </div>
           </CardContainer3SubDescriptionWrapper>
         </CardContainer3>
       </Wrapper>

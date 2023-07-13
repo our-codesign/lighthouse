@@ -10,12 +10,15 @@ import {
   Divider,
   TriangleDown,
   GetToKownContainer,
+  MyWhatsApp,
+  WhatsApp,
 } from "./styles";
 import Button from "../Button";
 import Dialog from "../Dialog";
 import useDialog from "../../hooks/use-dialog";
 import useScreenSize from "../../hooks/use-screen-size";
 import { Link } from "react-scroll";
+import WhatsappIconSVG from "../../assets/svgs/whatsappIconSVG";
 
 export type Screensize = {
   dynamicWidth: number;
@@ -76,6 +79,15 @@ export default function MainSession() {
           title="youtube"
         ></iframe>
       </Dialog>
+      <WhatsApp
+        className="whatsApp"
+        target="_blank"
+        href="https://api.whatsapp.com/send?phone=5511999907799"
+      >
+        <MyWhatsApp className="fa fa-whatsapp my-whatsApp">
+          <WhatsappIconSVG />
+        </MyWhatsApp>
+      </WhatsApp>
     </MainSessionContainer>
   );
 }

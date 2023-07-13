@@ -127,3 +127,24 @@ export const GetToKownContainer = styled.div`
   position: absolute;
   bottom: 5%;
 `;
+
+export const WhatsApp = styled.a`
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  cursor: pointer;
+  background-color: #25d366;
+  color: #fff;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 99999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const MyWhatsApp = styled.i``;

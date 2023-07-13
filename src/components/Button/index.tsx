@@ -12,6 +12,7 @@ interface ButtonProps {
   minWidth?: number | string;
   disabled?: boolean;
   style?: CSSProperties;
+  mobileHeigh?: number;
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -22,6 +23,7 @@ const Button: React.FC<ButtonProps> = ({
   minWidth,
   disabled,
   onClick,
+  mobileHeigh,
   style,
 }) => {
   const colors = {
@@ -75,6 +77,8 @@ const Button: React.FC<ButtonProps> = ({
     <ButtonContainer
       onClick={(e: any) => onClick && onClick(e)}
       disabled={disabled}
+      mobileHeigh={mobileHeigh}
+      type="button"
       style={{
         color: buttonColor[type],
         background: buttonBackgroundColor[type],

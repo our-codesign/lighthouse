@@ -1,5 +1,6 @@
 import React from "react";
 import "./App.css";
+import "./index.css";
 import Header from "./components/Header";
 import LighthousePhilosophySession from "./components/LighthousePhilosophySession";
 import MainSession from "./components/MainSession";
