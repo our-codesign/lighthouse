@@ -10,24 +10,38 @@ import {
   CardTitle,
   CardDescription,
   TextDivider,
+  TitleContainer,
 } from "./styles";
 import Button from "../Button/index";
 import { Link } from "react-scroll";
+import useDialog from "../../hooks/use-dialog";
+import Dialog from "../Dialog";
+import useScreenSize from "../../hooks/use-screen-size";
 
 export default function ExperienceSession() {
+  const { isVisible, handleClose, handleOpen, selected } = useDialog<string>();
+  const { screenSize } = useScreenSize();
+
+  const open = (string: string) => {
+    if (screenSize && screenSize?.dynamicWidth >= 884) return;
+
+    handleOpen(string);
+  };
   return (
     <ExperienceContainer id="solucoes">
       <Filter />
-      <div style={{ paddingTop: 200, zIndex: 999 }}>
+      <TitleContainer>
         <ExperienceTitle>EXPERIÊNCIA E MÉTODO</ExperienceTitle>
 
         <ExperienceDescription>
           PARA NAVEGAR EM DIFERENTES CENARIOS!
         </ExperienceDescription>
-      </div>
-      <Divider />
+      </TitleContainer>
+      <Divider style={{ width: "80%" }} />
       <GlowingCardsContainer>
-        <GlowingCard>
+        <GlowingCard
+          onClick={() => open("Software de gestão de investimentos")}
+        >
           <CardTitle>CONSULTORIA OPERACIONAL</CardTitle>
           <ExperienceDescriptionCard>
             <CardDescription>Corretora</CardDescription>
@@ -43,7 +57,13 @@ export default function ExperienceSession() {
           </ExperienceDescriptionCard>
         </GlowingCard>
 
-        <GlowingCard>
+        <GlowingCard
+          onClick={() =>
+            open(
+              "Aspectos legais sobre ativos de investidores brasileiros em jurisdição internacional"
+            )
+          }
+        >
           <CardTitle>CONSULTORIA JURÍDICA</CardTitle>
           <ExperienceDescriptionCard>
             <CardDescription>
@@ -56,7 +76,13 @@ export default function ExperienceSession() {
           </ExperienceDescriptionCard>
         </GlowingCard>
 
-        <GlowingCard>
+        <GlowingCard
+          onClick={() =>
+            open(
+              "Jurisdições favoráveis a tributação de investimento de brasileiros"
+            )
+          }
+        >
           <CardTitle>CONSULTORIA TRIBUTÁRIA</CardTitle>
           <ExperienceDescriptionCard>
             <CardDescription>
@@ -74,7 +100,11 @@ export default function ExperienceSession() {
             <TextDivider />
           </ExperienceDescriptionCard>
         </GlowingCard>
-        <GlowingCard>
+        <GlowingCard
+          onClick={() =>
+            open("Construindo um portfólio de ativos diversificados")
+          }
+        >
           <CardTitle>CONSULTORIA FINANCEIRA</CardTitle>
           <ExperienceDescriptionCard>
             <CardDescription>
@@ -93,7 +123,13 @@ export default function ExperienceSession() {
             <TextDivider />
           </ExperienceDescriptionCard>
         </GlowingCard>
-        <GlowingCard>
+        <GlowingCard
+          onClick={() =>
+            open(
+              "Usando estratégias de opções de forma segura e inovadora para geração de renda"
+            )
+          }
+        >
           <CardTitle>TRADING STRATEGIES</CardTitle>
           <ExperienceDescriptionCard>
             <CardDescription>
@@ -127,6 +163,26 @@ export default function ExperienceSession() {
           </Button>
         </Link>
       </div>
+      <Dialog
+        isVisible={isVisible}
+        onDismiss={handleClose}
+        height={300}
+        width={"90%"}
+      >
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100%",
+            textAlign: "center",
+            flexDirection: "column",
+          }}
+        >
+          <br />
+          <p>{selected}</p>
+        </div>
+      </Dialog>
     </ExperienceContainer>
   );
 }

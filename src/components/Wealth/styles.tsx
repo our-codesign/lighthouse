@@ -31,6 +31,8 @@ export const CardImage = styled.div`
     height: 400px;
     margin-left: 0;
     margin-top: -30%;
+    background-size: 100vw 40vh;
+    background-repeat: no-repeat;
   }
 `;
 

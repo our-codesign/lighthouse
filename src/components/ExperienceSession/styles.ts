@@ -12,6 +12,17 @@ export const ExperienceContainer = styled.div`
   justify-content: start;
   position: relative;
   flex-direction: column;
+  @media (max-width: 884px) {
+    padding-bottom: 200px;
+  }
+`;
+
+export const TitleContainer = styled.div`
+  padding-top: 200px;
+  z-index: 9999;
+  @media (max-width: 884px) {
+    padding-top: 0px;
+  }
 `;
 export const Filter = styled.div`
   position: absolute;
@@ -36,7 +47,7 @@ export const ExperienceTitle = styled.h1`
 
 export const CardTitle = styled.h1`
   text-align: center;
-  font: normal normal normal 20px/22px Aboreto;
+  font: normal normal normal 20px Aboreto;
   letter-spacing: 1px;
   color: #dbc68f;
   margin: 0;
@@ -44,6 +55,7 @@ export const CardTitle = styled.h1`
   @media (max-width: 884px) {
     position: absolute;
     top: 40%;
+    font-size: 18px;
   }
 `;
 
@@ -63,7 +75,8 @@ export const ExperienceDescription = styled.p`
   text-align: center;
   font: normal normal 500 30px/41px Open Sans;
   @media (max-width: 884px) {
-    font: normal normal 500 25px/31px Open Sans;
+    font: normal normal 500 17px Open Sans;
+    white-space: nowrap;
   }
   letter-spacing: 0px;
   color: #fafafa;

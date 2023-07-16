@@ -18,8 +18,6 @@ const HeaderLink: React.FC<HeaderLinkProps> = ({
 }) => {
   const borderBottom = isActive ? "2px solid #dbc68f" : "";
   const o = () => {
-    console.log(isBlog);
-
     if (onClick) onClick();
   };
   if (isBlog) {
