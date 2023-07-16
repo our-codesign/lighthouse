@@ -28,7 +28,7 @@ const AdvancedTrading = () => (
       <a
         style={{ textDecoration: "none" }}
         target="_blank"
-        href="https://lighthouseinvestimentos.wordpress.com/"
+        href="https://lighthouseinvestimentos.com/blog"
         rel="noreferrer"
       >
         <Button type="secondary" height={50} width={"35%"} minWidth={300}>

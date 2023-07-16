@@ -25,7 +25,7 @@ const HeaderLink: React.FC<HeaderLinkProps> = ({
       <a
         style={{ textDecoration: "none" }}
         target="_blank"
-        href="https://lighthouseinvestimentos.wordpress.com/"
+        href="https://lighthouseinvestimentos.com/blog"
         rel="noreferrer"
       >
         <LinkButton style={{ borderBottom }}>{children}</LinkButton>
