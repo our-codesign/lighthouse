@@ -87,10 +87,12 @@ export const ExperienceDescription = styled.p`
 
 export const Divider = styled.div`
   background: #dbc68f;
-  width: 40%;
+  width: 35%;
   height: 3.5px;
   border-radius: 90%;
-
+  @media (max-width: 884px) {
+    width: 55%;
+  }
   margin-top: 8px;
   transform: matrix(-1, 0, 0, -1, 0, 0);
   z-index: 999;

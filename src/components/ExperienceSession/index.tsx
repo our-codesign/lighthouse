@@ -37,7 +37,7 @@ export default function ExperienceSession() {
           PARA NAVEGAR EM DIFERENTES CENARIOS!
         </ExperienceDescription>
       </TitleContainer>
-      <Divider style={{ width: "80%" }} />
+      <Divider />
       <GlowingCardsContainer>
         <GlowingCard
           onClick={() => open("Software de gestão de investimentos")}
