@@ -25,7 +25,6 @@ export const Filter = styled.div`
 `;
 export const CardImage = styled.div`
   width: calc(50% + 15%);
-  background-image: url(/SOBRE.webp);
   background-size: cover;
   box-shadow: inset 0px 0px 40px 40px #0b1c38;
   height: auto;

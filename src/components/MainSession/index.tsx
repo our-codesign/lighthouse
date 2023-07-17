@@ -34,7 +34,7 @@ export default function MainSession() {
       ? "Temos um convite para você. Clique aqui!"
       : "Temos um convite para você.";
   return (
-    <MainSessionContainer id="home">
+    <MainSessionContainer id="home" className="home">
       <Filter />
       <MainSessionTitle>SIMPLIFICANDO INVESTIMENTOS</MainSessionTitle>
       <DividerContainer>

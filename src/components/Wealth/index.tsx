@@ -35,7 +35,7 @@ const Wealth = () => (
       </Link>
     </CardText>
     <Filter />
-    <CardImage />
+    <CardImage className="sobre" />
   </Wrapper>
 );
 
