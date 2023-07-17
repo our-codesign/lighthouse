@@ -26,11 +26,16 @@ export const CardImage = styled.div`
   box-shadow: inset 0px 0px 40px 40px #0b1c38;
   height: auto;
   margin-right: -15%;
+  @media (max-width: 1025px) {
+    background-size: 80vw 100%;
+    background-repeat: no-repeat;
+  }
   @media (max-width: 884px) {
     width: 100%;
     height: 400px;
     margin-right: 0;
     margin-left: -10%;
+    background-size: cover;
   }
 `;
 
@@ -41,6 +46,9 @@ export const CardText = styled.div`
   flex-direction: column;
   align-items: center;
   z-index: 9999;
+  @media (max-width: 1025px) {
+    padding: 15% 0 0 0;
+  }
   @media (max-width: 884px) {
     display: flex;
     flex-direction: column;
@@ -91,13 +99,14 @@ export const MainSessionDescription = styled.p`
   margin: 0;
   margin-bottom: 40px;
   margin-top: 10px;
-  font: normal normal normal 30px Times New Roman;
+  font: normal normal 500 25px Open Sans;
 
-  @media (max-width: 884px) {
+  @media (max-width: 1225px) {
     font: normal normal 500 20px Open Sans;
   }
+
   @media (max-width: 650px) {
-    font: normal normal 500 15px Open Sans;
+    font: normal normal 500 14px Open Sans;
   }
 `;
 

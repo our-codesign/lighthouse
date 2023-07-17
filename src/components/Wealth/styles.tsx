@@ -9,6 +9,10 @@ export const Wrapper = styled.div`
   box-shadow: inset 0px 0px 40px 40px #0b1c38;
   @media (max-width: 884px) {
     flex-direction: column;
+    min-height: 700px;
+    max-height: 1050px;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 `;
 export const Filter = styled.div`
@@ -30,7 +34,6 @@ export const CardImage = styled.div`
     width: 100%;
     height: 400px;
     margin-left: 0;
-    margin-top: -30%;
     background-size: 100vw 40vh;
     background-repeat: no-repeat;
   }

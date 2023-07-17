@@ -13,7 +13,7 @@ export const ExperienceContainer = styled.div`
   position: relative;
   flex-direction: column;
   @media (max-width: 884px) {
-    padding-bottom: 200px;
+    padding-bottom: 50px;
   }
 `;
 
@@ -55,7 +55,7 @@ export const CardTitle = styled.h1`
   @media (max-width: 884px) {
     position: absolute;
     top: 40%;
-    font-size: 18px;
+    font-size: 16px;
   }
 `;
 
@@ -161,4 +161,10 @@ export const TextDivider = styled.div`
   border-radius: 90%;
   z-index: 999;
   margin-top: 1px;
+`;
+
+export const DialogText = styled.p`
+  font: normal normal 500 17px Open Sans;
+  color: white;
+  margin: 0;
 `;

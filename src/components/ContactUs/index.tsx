@@ -14,7 +14,6 @@ import {
   ErrorText,
   InputContainer,
 } from "./styles";
-import locationIcon from "../../assets/images/locationIcon.webp";
 import phoneIcon from "../../assets/images/phoneIcon.webp";
 import emailIcon from "../../assets/images/emailIcon.webp";
 import Button from "../Button";
@@ -23,17 +22,11 @@ import Dialog from "../Dialog";
 import Loading from "react-loading-components";
 
 const messages = {
-  address: "123 MOCKUP ST, COTIA-SP",
   phone: "(+55) 11 99990-7799",
   email: "contato@lighthouseinvestimentos.com",
 };
 
 const contactInfo = [
-  {
-    icon: locationIcon,
-    alt: "Location Icon",
-    text: messages.address,
-  },
   {
     icon: phoneIcon,
     alt: "Phone Icon",

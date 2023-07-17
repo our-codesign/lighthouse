@@ -10,7 +10,6 @@ import {
   FooterLink,
   FooterTitle,
 } from "./styles";
-import locationIcon from "../../assets/images/locationIcon.webp";
 import phoneIcon from "../../assets/images/phoneIcon.webp";
 import emailIcon from "../../assets/images/emailIcon.webp";
 import { messages } from "./messages";
@@ -19,11 +18,6 @@ import { Link } from "react-scroll";
 
 const Footer = () => {
   const contactInfo = [
-    {
-      icon: locationIcon,
-      alt: "Location Icon",
-      text: messages.address,
-    },
     {
       icon: phoneIcon,
       alt: "Phone Icon",

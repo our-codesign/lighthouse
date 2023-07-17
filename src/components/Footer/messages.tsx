@@ -3,7 +3,6 @@ export const messages = {
   contactUs: "Fale Conosco",
   menu: "MENU",
   home: "Home",
-  address: "123 MOCKUP ST, COTIA-SP",
   phone: "(+55) 11 99990-7799",
   email: "contato@lighthouseinvestimentos.com",
   whoWeAre: "Quem Somos",

@@ -11,6 +11,7 @@ import {
   CardDescription,
   TextDivider,
   TitleContainer,
+  DialogText,
 } from "./styles";
 import Button from "../Button/index";
 import { Link } from "react-scroll";
@@ -19,10 +20,11 @@ import Dialog from "../Dialog";
 import useScreenSize from "../../hooks/use-screen-size";
 
 export default function ExperienceSession() {
-  const { isVisible, handleClose, handleOpen, selected } = useDialog<string>();
+  const { isVisible, handleClose, handleOpen, selected } =
+    useDialog<string[]>();
   const { screenSize } = useScreenSize();
 
-  const open = (string: string) => {
+  const open = (string: string[]) => {
     if (screenSize && screenSize?.dynamicWidth >= 884) return;
 
     handleOpen(string);
@@ -40,7 +42,7 @@ export default function ExperienceSession() {
       <Divider />
       <GlowingCardsContainer>
         <GlowingCard
-          onClick={() => open("Software de gestão de investimentos")}
+          onClick={() => open(["Software de gestão de investimentos"])}
         >
           <CardTitle>CONSULTORIA OPERACIONAL</CardTitle>
           <ExperienceDescriptionCard>
@@ -59,9 +61,9 @@ export default function ExperienceSession() {
 
         <GlowingCard
           onClick={() =>
-            open(
-              "Aspectos legais sobre ativos de investidores brasileiros em jurisdição internacional"
-            )
+            open([
+              "Aspectos legais sobre ativos de investidores brasileiros em jurisdição internacional",
+            ])
           }
         >
           <CardTitle>CONSULTORIA JURÍDICA</CardTitle>
@@ -78,9 +80,10 @@ export default function ExperienceSession() {
 
         <GlowingCard
           onClick={() =>
-            open(
-              "Jurisdições favoráveis a tributação de investimento de brasileiros"
-            )
+            open([
+              "Jurisdições favoráveis a tributação de investimento de brasileiros",
+              "Pagando menos impostos",
+            ])
           }
         >
           <CardTitle>CONSULTORIA TRIBUTÁRIA</CardTitle>
@@ -102,7 +105,10 @@ export default function ExperienceSession() {
         </GlowingCard>
         <GlowingCard
           onClick={() =>
-            open("Construindo um portfólio de ativos diversificados")
+            open([
+              "Construindo um portfólio de ativos diversificados",
+              "Gestão ativa de portfóilios financeiros",
+            ])
           }
         >
           <CardTitle>CONSULTORIA FINANCEIRA</CardTitle>
@@ -125,9 +131,9 @@ export default function ExperienceSession() {
         </GlowingCard>
         <GlowingCard
           onClick={() =>
-            open(
-              "Usando estratégias de opções de forma segura e inovadora para geração de renda"
-            )
+            open([
+              "Usando estratégias de opções de forma segura e inovadora para geração de renda",
+            ])
           }
         >
           <CardTitle>TRADING STRATEGIES</CardTitle>
@@ -163,26 +169,36 @@ export default function ExperienceSession() {
           </Button>
         </Link>
       </div>
-      <Dialog
-        isVisible={isVisible}
-        onDismiss={handleClose}
-        height={300}
-        width={"90%"}
-      >
-        <div
-          style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100%",
-            textAlign: "center",
-            flexDirection: "column",
-          }}
+      {selected && (
+        <Dialog
+          isVisible={isVisible}
+          onDismiss={handleClose}
+          height={300}
+          width={"90%"}
         >
-          <br />
-          <p>{selected}</p>
-        </div>
-      </Dialog>
+          <div
+            style={{
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center",
+              height: "100%",
+              textAlign: "center",
+              flexDirection: "column",
+              padding: 10,
+            }}
+          >
+            <DialogText>{selected[0]}</DialogText>
+            <Divider />
+            <br />
+            {selected.length > 1 && (
+              <>
+                <DialogText>{selected[1]}</DialogText>
+                <Divider style={{ width: "100%" }} />
+              </>
+            )}
+          </div>
+        </Dialog>
+      )}
     </ExperienceContainer>
   );
 }

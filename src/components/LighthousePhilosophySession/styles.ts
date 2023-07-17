@@ -20,7 +20,7 @@ export const Wrapper = styled.div<WrapperProps>`
   align-items: center;
   justify-content: flex-end;
   flex-direction: row;
-  @media (max-width: 800px) {
+  @media (max-width: 600px) {
     background-size: 120vw 100%;
     min-height: 100%;
   }
@@ -156,7 +156,7 @@ export const CardContainer1 = styled.div`
     height: 600px;
   }
   @media (max-width: 800px) {
-    padding: 0 50px;
+    padding: 0;
     height: 400px;
   }
 `;
@@ -251,7 +251,7 @@ export const CardContainer2 = styled.div`
   }
   @media (max-width: 600px) {
     padding: 0px;
-    height: 400px;
+    height: 600px;
   }
 `;
 
@@ -270,7 +270,7 @@ export const CardContainer2Title = styled.h1`
   margin: 0;
   @media (max-width: 1350px) {
     white-space: nowrap;
-    font: normal normal normal 22px Aboreto;
+    font: normal normal normal 18px Aboreto;
   }
 `;
 

@@ -65,8 +65,8 @@ export default function MyCarousel() {
 
   const height =
     screenSize && screenSize?.dynamicWidth >= 600
-      ? 600
-      : selectedIndex === 3
+      ? "100vh"
+      : selectedIndex === 3 || selectedIndex === 2
       ? 600
       : 400;
   return (
