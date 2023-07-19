@@ -22,7 +22,8 @@ export default function Header() {
       window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
-
+  const buttonWidth =
+    screenSize && screenSize.dynamicWidth >= 884 ? "20%" : "15%";
   return (
     <HeaderContainer>
       <LogoText>LIGHTHOUSE</LogoText>
@@ -37,9 +38,16 @@ export default function Header() {
         <HeaderLink to="fale-conosco">Fale Conosco</HeaderLink>
       </LinksContainer>
       {screenSize && screenSize.dynamicWidth >= 884 && (
-        <Button type="primary" height={51} width={"10%"}>
-          Contato
-        </Button>
+        <a
+          href={"https://api.whatsapp.com/send?phone=5511999907799"}
+          style={{ width: buttonWidth }}
+          target="_blank"
+          rel="noreferrer"
+        >
+          <Button type="primary" height={51} width={"100%"}>
+            Entrar em contato
+          </Button>
+        </a>
       )}
       {screenSize && screenSize.dynamicWidth < 884 && <BurguerMenu />}
     </HeaderContainer>

@@ -45,7 +45,7 @@ export default function MainSession() {
       <MainSessionDescription>
         ORIENTANDO VOCÊ A INVESTIR NO MERCADO FINANCEIRO INTERNACIONAL
       </MainSessionDescription>
-      <div style={{ marginTop: 60, zIndex: 999 }}>
+      <div style={{ marginTop: 60, zIndex: 9999999 }}>
         <Button type="tertiary" height={66} width={"100%"} onClick={handleOpen}>
           {cta}
         </Button>
