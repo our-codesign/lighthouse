@@ -186,10 +186,13 @@ export default function MyCarousel() {
                 ativos associadas aos ciclos de volatilidade e suas fases
               </CardContainer3SubDescription>
               <div style={{ paddingTop: 30 }}>
-                <a
-                  target="_blank"
-                  href="https://api.whatsapp.com/send?phone=5511999907799"
-                  rel="noreferrer"
+                <Link
+                  activeClass="active"
+                  to="fale-conosco"
+                  spy={true}
+                  smooth={true}
+                  offset={-70}
+                  duration={500}
                 >
                   <Button
                     onClick={next}
@@ -201,7 +204,7 @@ export default function MyCarousel() {
                   >
                     <ButtonWrapper>{cta2}</ButtonWrapper>
                   </Button>
-                </a>
+                </Link>
               </div>
             </CardContainer3SubDescriptionWrapper>
           </CardContainer3>
