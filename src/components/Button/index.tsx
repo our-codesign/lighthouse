@@ -60,14 +60,14 @@ const Button: React.FC<ButtonProps> = ({
   };
 
   const font = {
-    primary: "normal normal bold 16px/20px Open Sans",
+    primary: "normal normal bold 13px Open Sans",
     secondary: "",
     tertiary: "normal normal normal 20px/37px Times New Roman",
     round: "normal normal bold 20px/27px Open Sans", // added round property
   };
 
   const padding = {
-    primary: "0",
+    primary: "10px 20px",
     secondary: "0px",
     tertiary: "0 32px",
     round: "0px",

@@ -3,6 +3,7 @@ import BurguerMenu from "../BurguerMenu";
 import HeaderLink from "../HeaderLink";
 import { HeaderContainer, LogoText, LinksContainer } from "./styles";
 import { useState, useEffect } from "react";
+import { Link } from "react-scroll";
 
 type Screensize = { dynamicWidth: number; dynamicHeight: number };
 export default function Header() {
@@ -38,16 +39,18 @@ export default function Header() {
         <HeaderLink to="fale-conosco">Fale Conosco</HeaderLink>
       </LinksContainer>
       {screenSize && screenSize.dynamicWidth >= 884 && (
-        <a
-          href={"https://api.whatsapp.com/send?phone=5511999907799"}
-          style={{ width: buttonWidth }}
-          target="_blank"
-          rel="noreferrer"
+        <Link
+          activeClass="active"
+          to="fale-conosco"
+          spy={true}
+          smooth={true}
+          offset={-70}
+          duration={500}
         >
-          <Button type="primary" height={51} width={"100%"}>
+          <Button type="primary" width={"100%"}>
             Entrar em contato
           </Button>
-        </a>
+        </Link>
       )}
       {screenSize && screenSize.dynamicWidth < 884 && <BurguerMenu />}
     </HeaderContainer>
