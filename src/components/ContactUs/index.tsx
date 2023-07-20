@@ -187,8 +187,8 @@ const ContactUs = () => {
         >
           <br />
           <p>
-            Agradecemos por entrar em contato. Em breve, um dos nossos
-            representantes entrará em contato com você.
+            Agradecemos por entrar em contato. Em breve, responderemos sua
+            mensagem.
           </p>
         </div>
       </Dialog>
