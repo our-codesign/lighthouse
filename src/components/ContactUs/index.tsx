@@ -69,7 +69,6 @@ const ContactUs = () => {
     setPhoneError("");
     setEmailError("");
 
-    e.preventDefault();
     const url =
       "https://script.google.com/macros/s/AKfycbyV9dgY_m0RnclMoPF8HKecvfoKENePbsmiF4R1yc5xIq_PKEX5cXIgEkGX3o93ymlb/exec";
     let requestBody = new FormData();
@@ -81,6 +80,10 @@ const ContactUs = () => {
       .then((response) => {
         setIsVisible(true);
         setIsLoading(false);
+        setEmail("");
+        setMessage("");
+        setName("");
+        setPhone("");
       })
       .catch((error) => {
         alert("Error!");
