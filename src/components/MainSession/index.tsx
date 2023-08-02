@@ -19,6 +19,7 @@ import useDialog from "../../hooks/use-dialog";
 import useScreenSize from "../../hooks/use-screen-size";
 import { Link } from "react-scroll";
 import WhatsappIconSVG from "../../assets/svgs/whatsappIconSVG";
+import ANCHORS from "../../constants/anchors";
 
 export type Screensize = {
   dynamicWidth: number;
@@ -34,7 +35,7 @@ export default function MainSession() {
       ? "Temos um convite para você. Clique aqui!"
       : "Temos um convite para você.";
   return (
-    <MainSessionContainer id="home" className="home">
+    <MainSessionContainer id={ANCHORS.home} className="home">
       <Filter />
       <MainSessionTitle>SIMPLIFICANDO INVESTIMENTOS</MainSessionTitle>
       <DividerContainer>
@@ -53,7 +54,7 @@ export default function MainSession() {
       <GetToKownContainer>
         <Link
           activeClass="active"
-          to="quemSomos"
+          to={ANCHORS.wealth}
           style={{
             cursor: "pointer",
             display: "flex",

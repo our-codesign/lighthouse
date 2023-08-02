@@ -2,9 +2,10 @@ import React from "react";
 import { Title, Text, Wrapper, CardText, CardImage, Filter } from "./styles";
 import Button from "../Button/index";
 import { Link } from "react-scroll";
+import ANCHORS from "../../constants/anchors";
 
 const Wealth = () => (
-  <Wrapper id="quemSomos">
+  <Wrapper id={ANCHORS.wealth}>
     <CardText>
       <Title>
         VOCÊ NO COMANDO <br /> DE SUAS RIQUEZAS
@@ -23,7 +24,7 @@ const Wealth = () => (
       </Text>
       <Link
         activeClass="active"
-        to="solucoes"
+        to={ANCHORS.experience}
         spy={true}
         smooth={true}
         offset={-70}

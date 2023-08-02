@@ -5,7 +5,6 @@ import {
   Arrow1Wrapper,
   Arrow2Wrapper,
   ButtonWrapper,
-  Card2,
   CardContainer0,
   CardContainer1,
   CardContainer1Description,
@@ -36,6 +35,7 @@ import RightArrowSVG from "../../assets/svgs/rightArrowSVG";
 import LeftArrowSVG from "../../assets/svgs/leftArrowSVG";
 import { Link } from "react-scroll";
 import useScreenSize from "../../hooks/use-screen-size";
+import ANCHORS from "../../constants/anchors";
 
 export default function MyCarousel() {
   const [selectedIndex, setSelectedIndex] = useState(0);
@@ -81,7 +81,7 @@ export default function MyCarousel() {
         dynamicHeight={true}
         animationHandler={"fade"}
       >
-        <Wrapper containerIndex={0} id="metodologia">
+        <Wrapper containerIndex={0} id={ANCHORS.philosophy}>
           <Filter1 />
           <CardContainer0>
             <DescriptionContainer0>
@@ -188,7 +188,7 @@ export default function MyCarousel() {
               <div style={{ paddingTop: 30 }}>
                 <Link
                   activeClass="active"
-                  to="fale-conosco"
+                  to={ANCHORS.contact}
                   spy={true}
                   smooth={true}
                   offset={-70}

@@ -4,6 +4,7 @@ import HeaderLink from "../HeaderLink";
 import { HeaderContainer, LogoText, LinksContainer } from "./styles";
 import { useState, useEffect } from "react";
 import { Link } from "react-scroll";
+import ANCHORS from "../../constants/anchors";
 
 type Screensize = { dynamicWidth: number; dynamicHeight: number };
 export default function Header() {
@@ -23,25 +24,24 @@ export default function Header() {
       window.removeEventListener("resize", setDimension);
     };
   }, [screenSize]);
-  const buttonWidth =
-    screenSize && screenSize.dynamicWidth >= 884 ? "20%" : "15%";
+
   return (
     <HeaderContainer>
       <LogoText>LIGHTHOUSE</LogoText>
       <LinksContainer>
-        <HeaderLink to="home">Home</HeaderLink>
-        <HeaderLink to="quemSomos">Quem Somos</HeaderLink>
-        <HeaderLink to="solucoes">Soluções</HeaderLink>
-        <HeaderLink to="metodologia">Metodologia</HeaderLink>
+        <HeaderLink to={ANCHORS.home}>Home</HeaderLink>
+        <HeaderLink to={ANCHORS.wealth}>Quem Somos</HeaderLink>
+        <HeaderLink to={ANCHORS.experience}>Soluções</HeaderLink>
+        <HeaderLink to={ANCHORS.philosophy}>Metodologia</HeaderLink>
         <HeaderLink to="blog" isBlog={true}>
           Blog
         </HeaderLink>
-        <HeaderLink to="fale-conosco">Fale Conosco</HeaderLink>
+        <HeaderLink to={ANCHORS.contact}>Fale Conosco</HeaderLink>
       </LinksContainer>
       {screenSize && screenSize.dynamicWidth >= 884 && (
         <Link
           activeClass="active"
-          to="fale-conosco"
+          to={ANCHORS.contact}
           spy={true}
           smooth={true}
           offset={-70}

@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import HeaderLink from "../HeaderLink";
+import ANCHORS from "../../constants/anchors";
 
 type SidebarProps = {
   isOpen: boolean;
@@ -76,22 +77,22 @@ const BurgerMenu = () => {
 
       <Sidebar isOpen={isOpen}>
         <CloseButton onClick={closeSidebar}>X</CloseButton>
-        <HeaderLink onClick={closeSidebar} to="home">
+        <HeaderLink onClick={closeSidebar} to={ANCHORS.home}>
           Home
         </HeaderLink>
-        <HeaderLink onClick={closeSidebar} to="quemSomos">
+        <HeaderLink onClick={closeSidebar} to={ANCHORS.wealth}>
           Quem Somos
         </HeaderLink>
-        <HeaderLink onClick={closeSidebar} to="solucoes">
+        <HeaderLink onClick={closeSidebar} to={ANCHORS.experience}>
           Soluções
         </HeaderLink>
-        <HeaderLink onClick={closeSidebar} to="metodologia">
+        <HeaderLink onClick={closeSidebar} to={ANCHORS.philosophy}>
           Metodologia
         </HeaderLink>
         <HeaderLink onClick={closeSidebar} to="blog" isBlog>
           Blog
         </HeaderLink>
-        <HeaderLink onClick={closeSidebar} to="fale-conosco">
+        <HeaderLink onClick={closeSidebar} to={ANCHORS.contact}>
           Fale Conosco
         </HeaderLink>
       </Sidebar>

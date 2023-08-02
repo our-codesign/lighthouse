@@ -1,4 +1,3 @@
-import React from "react";
 import "./App.css";
 import "./index.css";
 import Header from "./components/Header";
@@ -9,8 +8,17 @@ import ExperienceSession from "./components/ExperienceSession";
 import AdvancedTrading from "./components/AdvancedTrading";
 import ContactUs from "./components/ContactUs";
 import Footer from "./components/Footer";
+import useAnchors from "./hooks/use-anchors";
 
 function App() {
+  const {
+    mainContainerRef,
+    wealthContainerRef,
+    experienceContainerRef,
+    philosophyContainerRef,
+    contactContainerRef,
+  } = useAnchors();
+
   return (
     <div
       style={{
@@ -20,12 +28,23 @@ function App() {
       }}
     >
       <Header />
-      <MainSession />
-      <Wealth />
-      <ExperienceSession />
-      <LighthousePhilosophySession />
+      <div ref={mainContainerRef}>
+        <MainSession />
+      </div>
+      <div ref={wealthContainerRef}>
+        <Wealth />
+      </div>
+      <div ref={experienceContainerRef}>
+        <ExperienceSession />
+      </div>
+      <div ref={philosophyContainerRef}>
+        <LighthousePhilosophySession />
+      </div>
+
       <AdvancedTrading />
-      <ContactUs />
+      <div ref={contactContainerRef}>
+        <ContactUs />
+      </div>
       <Footer />
     </div>
   );

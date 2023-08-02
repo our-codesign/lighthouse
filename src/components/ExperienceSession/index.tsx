@@ -18,6 +18,7 @@ import { Link } from "react-scroll";
 import useDialog from "../../hooks/use-dialog";
 import Dialog from "../Dialog";
 import useScreenSize from "../../hooks/use-screen-size";
+import ANCHORS from "../../constants/anchors";
 
 export default function ExperienceSession() {
   const { isVisible, handleClose, handleOpen, selected } =
@@ -30,7 +31,7 @@ export default function ExperienceSession() {
     handleOpen(string);
   };
   return (
-    <ExperienceContainer id="solucoes">
+    <ExperienceContainer id={ANCHORS.experience}>
       <Filter />
       <TitleContainer>
         <ExperienceTitle>EXPERIÊNCIA E MÉTODO</ExperienceTitle>
@@ -158,7 +159,7 @@ export default function ExperienceSession() {
       >
         <Link
           activeClass="active"
-          to="metodologia"
+          to={ANCHORS.philosophy}
           spy={true}
           smooth={true}
           offset={-70}

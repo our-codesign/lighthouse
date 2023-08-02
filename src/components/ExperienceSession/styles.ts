@@ -18,7 +18,7 @@ export const ExperienceContainer = styled.div`
 `;
 
 export const TitleContainer = styled.div`
-  padding-top: 200px;
+  padding-top: 100px;
   z-index: 9999;
   @media (max-width: 884px) {
     padding-top: 0px;

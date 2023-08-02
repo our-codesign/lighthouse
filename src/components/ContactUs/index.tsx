@@ -20,6 +20,7 @@ import Button from "../Button";
 import Dialog from "../Dialog";
 // @ts-ignore
 import Loading from "react-loading-components";
+import ANCHORS from "../../constants/anchors";
 
 const messages = {
   phone: "(+55) 11 99990-7799",
@@ -84,14 +85,15 @@ const ContactUs = () => {
         setMessage("");
         setName("");
         setPhone("");
+        setTimeout(() => setIsVisible(false), 5000);
       })
       .catch((error) => {
         alert("Error!");
-        setIsLoading(true);
+        setIsLoading(false);
       });
   };
   return (
-    <ContactContainer id="fale-conosco">
+    <ContactContainer id={ANCHORS.contact}>
       <CardText>
         <MainSessionTitle>Fale Conosco</MainSessionTitle>
         <LeftDivider />

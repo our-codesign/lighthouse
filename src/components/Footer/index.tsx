@@ -15,6 +15,7 @@ import emailIcon from "../../assets/images/emailIcon.webp";
 import { messages } from "./messages";
 import LOGO from "../../assets/images/LOGO-LIGHTHOUSEBRANCO.webp";
 import { Link } from "react-scroll";
+import ANCHORS from "../../constants/anchors";
 
 const Footer = () => {
   const contactInfo = [
@@ -31,12 +32,12 @@ const Footer = () => {
   ];
 
   const menuItems = [
-    { text: messages.home, id: "home" },
-    { text: messages.whoWeAre, id: "quemSomos" },
-    { text: messages.solutions, id: "solucoes" },
-    { text: messages.methodology, id: "metodologia" },
+    { text: messages.home, id: ANCHORS.home },
+    { text: messages.whoWeAre, id: ANCHORS.wealth },
+    { text: messages.solutions, id: ANCHORS.experience },
+    { text: messages.methodology, id: ANCHORS.philosophy },
     { text: messages.blog, id: "blog" },
-    { text: messages.contact, id: "fale-conosco" },
+    { text: messages.contact, id: ANCHORS.contact },
   ];
 
   return (
