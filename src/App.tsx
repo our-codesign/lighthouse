@@ -11,13 +11,7 @@ import Footer from "./components/Footer";
 import useAnchors from "./hooks/use-anchors";
 
 function App() {
-  const {
-    mainContainerRef,
-    wealthContainerRef,
-    experienceContainerRef,
-    philosophyContainerRef,
-    contactContainerRef,
-  } = useAnchors();
+  useAnchors();
 
   return (
     <div
@@ -28,23 +22,13 @@ function App() {
       }}
     >
       <Header />
-      <div ref={mainContainerRef}>
-        <MainSession />
-      </div>
-      <div ref={wealthContainerRef}>
-        <Wealth />
-      </div>
-      <div ref={experienceContainerRef}>
-        <ExperienceSession />
-      </div>
-      <div ref={philosophyContainerRef}>
-        <LighthousePhilosophySession />
-      </div>
+      <MainSession />
+      <Wealth />
+      <ExperienceSession />
+      <LighthousePhilosophySession />
 
       <AdvancedTrading />
-      <div ref={contactContainerRef}>
-        <ContactUs />
-      </div>
+      <ContactUs />
       <Footer />
     </div>
   );
